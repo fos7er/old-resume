@@ -1,10 +1,301 @@
 body {
 
-	background-image: url(../img/;
+	line-height: 24px;
+    font-family: "PT Sans Narrow", sans-serif, Arial;
+    font-weight: 700;
+	font-size: 14px;
+	color: #fff;
+	margin: 0px;
+	
+	
 }
 
-p {
-	color: red;
+
+
+.site-header {
+width:100%;
+margin-bottom: 0px;
+background-color: #000;
+font-size: 16px;
+
+}
+.container {
+	width:940px;
+	margin: auto;
+
+
+}
+.main-menu ul {
+list-style: none;
+margin-top: 0px;
+height: 72px;  //**  ВЫСОТА ХЕДЕРА **//
+}
+
+.main-menu li{
+display: inline-block;
+
+}
+
+.main-menu a {
+display: block;
+text-decoration: none;
+padding-top: 22px;
+padding-bottom: 21px;
+padding-right: 40px;
+color:#fff;
+
+}
+.userblock  {
+display: inline-block;
+width:90px;
+padding-left: 30px;
+margin-left: 150px;
+
+}
+.userblock a {
+padding-top: 17px;
+padding-bottom: 21px;
+padding-left: 30px;
+background:  url(../img/icon-login.png) no-repeat 0px 22px; //**КАРТИНКА ВХОДА**//
+}
+.logo img {
+display: block;
+margin: auto;
+padding-top: 50px;
+}
+main {
+margin-top:  -20px;
+background-color: black;
+background: url(../img/barbershop-index-bg.jpg);
+
+}
+.features-name {
+font-size: 30px;
+text-align: center; 
+}
+
+section.features {
+text-align: center;
+
+
+
+
+}
+.features-item {
+display: inline-block;
+width: 314px;
+text-align: center;
+vertical-align: top; 
+}
+
+.index-content {
+display:block;
+width:940px;
+height: 430px;
+background: url(../img/noise.jpg);
+color: black;
+margin-bottom: 30px;
+
+}
+.index-content p {
+	margin-bottom: 0;
+	
+}
+
+ul.news-preview {
+list-style: none;
+margin:0;
+padding: 0px 0px;	
+}
+
+
+.index-content-left {
+display: block;
+float: left;
+width: 390px;
+padding-left: 80px;
+	
+}
+
+
+.index-content-right {
+display: block;
+float: right;
+width: 390px;
+padding-left: 80px;
+
+}
+
+.index-content-title {
+font-size: 22px;
+margin:0;
+padding-top: 50px;
+
+padding-bottom: 0;
+margin-bottom: 0;
+
+
+}
+
+figure.gallery-container {
+margin: 0;
+padding: 20px 0px 0px 0px;	
+
+}
+.gallery-container img {
+border: solid white 7px;	
+}
+
+a.btn,
+button {
+display: block;
+float: left;
+width: 140px;
+margin:0;
+margin-top: 32px;
+margin-right: 20px;
+background-color: black;
+color:white;
+font-weight: normal;
+text-decoration: none;
+text-align: center;
+padding: 10px 0;
+}
+
+time {
+font-weight: normal;
+font-style: italic;
+
+}
+.appointment input {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 106px;
+    padding: 10px 15px;
+    border: 2px solid black;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    background: #f9f6f3;
+    outline: none;
+    background: white url("../img/content-background.jpg");
+    color: #000;
+
+}
+
+/*  ЦВЕТ ПЛЕЙСХОЛДЕРА*/
+
+input::-moz-placeholder          {
+  color:#000;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", sans-serif, Arial;
+  font-weight: 700;
+  font-size: 14px;
+  opacity: 1.0;
+
+}
+
+input::-webkit-input-placeholder {
+  color:#000;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", sans-serif, Arial;
+  font-weight: 700;
+  font-size: 14px;
+  opacity: 1.0;
+
+}
+
+.appointment .btn {
+color: #fff;
+background: black;
+width: 300px;
+text-align: center;
+padding: px 0;
+margin-top: 6px;
+border:none;
+}
+.site-footer {
+display: block;
+width: 100%;
+height: 190px;
+background-color: #232323;
+background-image: url(../img/footer-noise.png);	
+}
+section.contacts {
+display: block;
+float: left;
+margin-top: 50px;
+width: 314px;
+}
+section.contacts a {
+color: #fff;	
+}
+
+section.social {
+display: block;
+float: left;
+margin-top: 50px;
+margin-left: 90px;
+width:148px;
+text-align: center;	
+}
+.social a {
+display: block;
+float: left;
+width: 42px;
+height: 42px;
+margin-right: 6px;
+background-color: #000;
+
+}
+.social-vk {
+background-image: url(..//img/v.png);
+background-repeat: no-repeat; 
+background-position: 50% 50%;
+
+}
+
+.social-fb {
+background-image: url(..//img/f.png);
+background-repeat: no-repeat;
+background-position: 50% 50%;
+
+
+}
+.social-inst {
+background-image: url(..//img/insta.png);
+background-repeat: no-repeat; 
+background-position: 50% 50%;
+
+
+}
+
+section.copyright {
+display: block;
+float: right;
+margin-top: 50px;
+width: 150px;
+text-align: center;	
+
+}
+.author-name {
+display: block;
+float: left;
+width: 140px;
+margin:0;
+margin-right: 20px;
+background-color: black;
+color:white;
+font-size: 16px;
+text-transform: uppercase;
+font-weight: bold;
+font-weight: normal;
+text-decoration: none;
+text-align: center;
+padding: 9px 0;
 
 
 }
