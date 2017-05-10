@@ -85,7 +85,7 @@ height: 27px;
 padding-top: 18px;
 padding-bottom: 21px;
 padding-left: 40px;
-background:  url(../img/icon-login.png) no-repeat 10px 22px; //**КАРТИНКА ВХОДА**//
+background:  url(../img/icon-login.png) no-repeat 10px 22px; /**КАРТИНКА ВХОДА**/
 }
 .logo img {
 display: block;
@@ -272,7 +272,7 @@ color: #fff;
 background: black;
 width: 300px;
 text-align: center;
-padding: px 0;
+padding: 10px  0;
 margin-top: 6px;
 border:none;
 }
@@ -445,11 +445,11 @@ margin-right: 10px;
 text-transform: uppercase;
 
 }
-{
 
 
 
-}
+
+
 .shop-container li {
  display: inline-block;
  float: left;
