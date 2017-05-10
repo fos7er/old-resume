@@ -19,6 +19,9 @@ background-color: #000;
 font-size: 16px;
 
 }
+
+
+
 .container {
 	width:940px;
 	margin: auto;
@@ -28,11 +31,24 @@ font-size: 16px;
 .main-menu ul {
 list-style: none;
 margin-top: 0px;
-height: 72px;  //**  ВЫСОТА ХЕДЕРА **//
+padding-left: 0px;
+height: 74px;
+
+
+
 }
 
 .main-menu li{
 display: inline-block;
+height: 70px;  /**  ВЫСОТА ХЕДЕРА **/
+
+}
+
+
+
+li.current {
+height: 66px;
+border-bottom: solid #fff 4px;
 
 }
 
@@ -40,23 +56,36 @@ display: inline-block;
 display: block;
 text-decoration: none;
 padding-top: 22px;
-padding-bottom: 21px;
-padding-right: 40px;
+padding-bottom: 15px;
+padding-left: 20px;
+padding-right: 20px;
 color:#fff;
 
 }
+
+li.small-logo a{
+
+ background-image: url(../img/smalllogo.png);
+ background-repeat: no-repeat; 
+ background-position: 0 25px;
+ color: transparent;
+
+}
+
 .userblock  {
 display: inline-block;
 width:90px;
+
 padding-left: 30px;
-margin-left: 150px;
+margin-left: 290px;
 
 }
 .userblock a {
-padding-top: 17px;
+height: 27px;
+padding-top: 18px;
 padding-bottom: 21px;
-padding-left: 30px;
-background:  url(../img/icon-login.png) no-repeat 0px 22px; //**КАРТИНКА ВХОДА**//
+padding-left: 40px;
+background:  url(../img/icon-login.png) no-repeat 10px 22px; //**КАРТИНКА ВХОДА**//
 }
 .logo img {
 display: block;
@@ -72,6 +101,23 @@ background: url(../img/barbershop-index-bg.jpg);
 .features-name {
 font-size: 30px;
 text-align: center; 
+}
+
+/* РОМБИКИ НА ГЛАВНОЙ ПОД ФИЧАМИ*/
+.features-name:after {
+ content: "";
+ display: block;
+ position: relative;
+ left: 148px;
+ top: 20px;
+ width: 20px;
+ height: 20px;
+ background-color: #fff;
+  -moz-transform: rotate(45deg); /* Для Firefox */
+  -ms-transform: rotate(45deg); /* Для IE */
+  -webkit-transform: rotate(45deg); /* Для Safari, Chrome, iOS */
+  -o-transform: rotate(45deg); /* Для Opera */
+  transform: rotate(45deg);
 }
 
 section.features {
@@ -92,7 +138,7 @@ vertical-align: top;
 display:block;
 width:940px;
 height: 430px;
-background: url(../img/noise.jpg);
+background: url(../img/column-separator.png)  no-repeat center, url(../img/noise.jpg);
 color: black;
 margin-bottom: 30px;
 
@@ -106,6 +152,7 @@ ul.news-preview {
 list-style: none;
 margin:0;
 padding: 0px 0px;	
+padding-right: 10px;
 }
 
 
@@ -119,8 +166,8 @@ padding-left: 80px;
 
 
 .index-content-right {
+float:right;
 display: block;
-float: right;
 width: 390px;
 padding-left: 80px;
 
@@ -158,6 +205,7 @@ background-color: black;
 color:white;
 font-weight: normal;
 text-decoration: none;
+text-transform: uppercase;
 text-align: center;
 padding: 10px 0;
 }
@@ -181,14 +229,14 @@ font-style: italic;
     text-transform: uppercase;
     background: #f9f6f3;
     outline: none;
-    background: white url("../img/content-background.jpg");
+    background: white url("../img/noise.jpg");
     color: #000;
 
 }
 
 /*  ЦВЕТ ПЛЕЙСХОЛДЕРА*/
 
-input::-moz-placeholder          {
+input::-moz-placeholder {
   color:#000;
   line-height: 24px;
   font-family: "PT Sans Narrow", sans-serif, Arial;
@@ -206,7 +254,18 @@ input::-webkit-input-placeholder {
   font-size: 14px;
   opacity: 1.0;
 
+
 }
+
+.appointment input:focus{
+
+border:  2px solid #663d15;
+
+}
+
+
+
+
 
 .appointment .btn {
 color: #fff;
@@ -297,5 +356,410 @@ text-decoration: none;
 text-align: center;
 padding: 9px 0;
 
+
+}
+
+/* ЭФФЕКТЫ МЕНЮ И КНОПОК*/
+
+.main-menu ul>li:hover {
+ background-color: #242424;
+
+}
+
+.userblock a:hover {
+background: #242424 url(../img/login-active.png) no-repeat 10px 22px;
+
+}
+
+.btn:hover
+{
+background-color: #663d15;
+
+}
+
+.author-name:hover,
+.social a:hover {
+background-color: #fff;
+color: #000;
+}
+
+.social-vk:hover {
+background-image: url(../img/v-active.png);
+
+}
+
+.social-fb:hover {
+background-image: url(../img/f-active.png);
+
+}
+
+.social-inst:hover {
+background-image: url(../img/insta-active.png);
+
+}
+
+/*СТИЛИ item.html*/
+
+.clearfix:after {
+    
+display: table;
+    content: "";
+    clear: both;}
+
+.shop-container {
+display: block;
+background-image: url(../img/noise.jpg);
+color: #000;
+ 
+}
+.shop-title {
+font-size: 30px;
+color: #000;
+text-transform: uppercase;
+padding-top: 60px;
+margin-top: 0;
+
+}
+
+.shop-link {
+  display: block;
+  float:left;
+  width: 50px;
+  margin-right: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.shop-container ul {
+color: #000;
+list-style: none;
+padding-left: 0;
+
+}
+
+
+.shop-container li:before {
+content: "◆";
+margin-right: 10px;
+text-transform: uppercase;
+
+}
+{
+
+
+
+}
+.shop-container li {
+ display: inline-block;
+ float: left;
+ margin-right: 10px;
+ text-transform: uppercase;
+}
+
+
+.shop-container li a {
+color: #000;
+text-decoration: none;
+text-transform: uppercase;
+
+}
+
+.shop-container li:last-child a{
+ opacity: .5; 
+}
+
+.shop-left-container {
+ display: block;
+ float: left;
+ clear: left;
+ width: 480px;
+ padding-top: 55px;
+ color:#000; 
+}
+.shop-left-container img {
+box-shadow: 0 0 10px;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.shop-left-container .preview img {
+margin-right: 17px;
+margin-bottom: 50px;
+
+}
+
+.shop-right-container {
+ display: block;
+ float: left;
+ width: 380px;
+ padding-top: 55px;
+ margin-left: 40px;
+ color:#000; 
+ 
+}
+
+.shop-available-articul {
+width: 380px;
+
+}
+.shop-available-articul td:last-child {
+text-align: right;
+opacity: .5;
+}
+
+.price {
+ display: inline-block;
+ float: left;
+ width: 110px;
+ margin-top: 45px;
+ padding: 10px;
+ text-align: center;
+ background-color: #e5e5e5;
+ color: #000;
+ text-transform: uppercase;
+}
+
+a.btn-shop {
+margin-top: 45px;
+width: 75px;
+}
+.feature-name {
+ clear: both;
+ font-size: 24px;
+ text-transform: uppercase;
+ margin-top: 65px; 
+}
+
+ul.features {
+padding-left: 0;
+margin-right: 50px;
+}
+
+/*СТИЛИ КАТАЛОГА МАГАЗИНА*/
+
+.catalog-filters {
+display: block;
+float: left;
+clear: left;
+width: 235px;	
+}
+
+.catalog {
+display: block;
+float: right;
+width: 705px;
+margin-top: 65px;
+
+
+}
+
+label {
+text-transform: uppercase;
+cursor: pointer;
+
+}
+
+/* СТИЛИ ЧЕКБОКСОВ И РАДИО */
+
+input[type=checkbox],
+input[type=radio] {
+display: none;
+
+}
+
+label.check,
+label.radio {
+position: relative;	
+
+}
+
+label.check:before {
+content: "";
+display: inline-block;
+position: relative;
+top: 5px;
+width: 16px;
+height: 16px;
+border: solid #000 2px;
+margin-right: 20px;
+
+
+
+}
+
+input[type=checkbox]:checked + label.check:after {
+ 
+content: "\2716";
+position: absolute;
+top: 1px;
+left: 2px;
+font-size: 18px;
+text-align: center;
+line-height: 18px;
+
+}
+
+label.radio:before {
+content: "";
+display: inline-block;
+position: relative;
+top: 5px;
+width: 16px;
+height: 16px;
+border-radius: 16px;
+border: solid #000 2px;
+margin-right: 20px;
+
+}
+
+input[type=radio]:checked + label.radio:after {
+ 
+content: "⚫";
+position: absolute;
+top: -3px;
+left:2px;
+font-size: 17px;
+text-align: center;
+
+}
+
+/*Конец стилей чекбоксов*/
+
+.pages {
+	display: block;
+	float: left;
+	clear: left;
+}
+.catalog-item {
+display: inline-block;
+float: left;
+width: 220px;
+box-shadow: 0 0 5px;
+background-color: #fff;
+padding-bottom: 20px;
+margin-right: 20px;
+margin-bottom: 20px;
+
+}
+
+.catalog-item:nth-child(3n) {
+margin-right: 0px;	
+}
+
+
+
+p.catalog-descr {
+margin-left: 20px;
+margin-top: 0;
+line-height: 1.2em;
+
+}
+.catalog-item div.price {
+margin:0;
+margin-left: 20px;
+width: 110px;
+padding: 10px 0;	
+}
+
+.catalog-item .btn-shop {
+margin: 0;
+
+
+}
+
+.pages {
+ display: block;
+ float: left;
+ margin-top: 20px;
+ margin-bottom: 40px; 
+}
+
+.page {
+ display: inline-block;
+ padding: 10px 20px;
+ margin-right: 5px;
+ color: #fff;
+ background-color: #000;
+
+}
+
+.current-page {
+color:#000;
+background-color: #fff;
+
+}
+
+/* ПРАЙС ЛИСТ*/
+
+.container-title {
+display: block;
+margin: auto;
+text-align: center;
+font-size: 48px;
+
+
+}
+
+.container-title p {
+display: block;
+margin: auto;
+width: 600px;
+margin-bottom: 75px;
+position: relative;
+top:52px;
+background-image: url(../img/noise.jpg);
+
+}
+
+.container-title::before {
+content:"";
+display: block;
+position: relative;
+top: 65px;
+border: solid #000 1px;
+
+}
+
+.price-left {
+display: block;
+float: left;
+width: 330px;
+
+
+}
+
+.price-left li {
+clear: left;
+margin-bottom: 20px;  
+}
+
+.price-right {
+display: block;
+float: right;
+width: 500px;
+
+}
+
+
+table.price {
+
+display: block;
+width: 460px;
+margin-top: 0px;
+margin-bottom: 120px;
+border-collapse: collapse;
+background-image: url(../img/noise.jpg);
+
+}
+
+td {
+border: solid black 2px;
+width: 230px; 
+}
+
+table.price td:nth-child(2n+1) {
+text-align: left;
+padding-left: 20px;  
 
 }
