@@ -6,6 +6,8 @@ body {
 	font-size: 14px;
 	color: #fff;
 	margin: 0px;
+	text-transform: uppercase;
+
 	
 	
 }
@@ -74,10 +76,9 @@ li.small-logo a{
 
 .userblock  {
 display: inline-block;
+vertical-align: top;
 width:90px;
-
-padding-left: 30px;
-margin-left: 290px;
+float:right;
 
 }
 .userblock a {
@@ -85,12 +86,16 @@ height: 27px;
 padding-top: 18px;
 padding-bottom: 21px;
 padding-left: 40px;
-background:  url(../img/icon-login.png) no-repeat 10px 22px; /**КАРТИНКА ВХОДА**/
+background:  url(../img/icon-login.png) no-repeat 10px 22px; //**КАРТИНКА ВХОДА**//
 }
 .logo img {
 display: block;
 margin: auto;
 padding-top: 50px;
+}
+div.logo {
+margin-bottom: 37px;
+
 }
 main {
 margin-top:  -20px;
@@ -122,6 +127,7 @@ text-align: center;
 
 section.features {
 text-align: center;
+margin-bottom: 80px;
 
 
 
@@ -136,11 +142,11 @@ vertical-align: top;
 
 .index-content {
 display:block;
-width:940px;
-height: 430px;
+width:780px;
 background: url(../img/column-separator.png)  no-repeat center, url(../img/noise.jpg);
 color: black;
 margin-bottom: 30px;
+padding: 50px 80px;
 
 }
 .index-content p {
@@ -159,25 +165,21 @@ padding-right: 10px;
 .index-content-left {
 display: block;
 float: left;
-width: 390px;
-padding-left: 80px;
+width: 330px;
+
 	
 }
 
 
 .index-content-right {
 float:right;
-display: block;
-width: 390px;
-padding-left: 80px;
-
+width: 320px;
+margin-right:-20px;
 }
 
 .index-content-title {
-font-size: 22px;
+font-size: 30px;
 margin:0;
-padding-top: 50px;
-
 padding-bottom: 0;
 margin-bottom: 0;
 
@@ -185,8 +187,9 @@ margin-bottom: 0;
 }
 
 figure.gallery-container {
-margin: 0;
-padding: 20px 0px 0px 0px;	
+margin: 0;	
+margin-top:20px;
+
 
 }
 .gallery-container img {
@@ -194,8 +197,7 @@ border: solid white 7px;
 }
 
 a.btn,
-button {
-display: block;
+.btn {
 float: left;
 width: 140px;
 margin:0;
@@ -208,6 +210,12 @@ text-decoration: none;
 text-transform: uppercase;
 text-align: center;
 padding: 10px 0;
+outline:none;
+border:none; 
+}
+.index-content-right .btn {
+margin-top: 25px;
+
 }
 
 time {
@@ -272,21 +280,21 @@ color: #fff;
 background: black;
 width: 300px;
 text-align: center;
-padding: 10px  0;
+padding: px 0;
 margin-top: 6px;
 border:none;
 }
 .site-footer {
 display: block;
 width: 100%;
-height: 190px;
+height: 140px;
+padding-top: 50px;
 background-color: #232323;
 background-image: url(../img/footer-noise.png);	
 }
 section.contacts {
 display: block;
 float: left;
-margin-top: 50px;
 width: 314px;
 }
 section.contacts a {
@@ -296,7 +304,6 @@ color: #fff;
 section.social {
 display: block;
 float: left;
-margin-top: 50px;
 margin-left: 90px;
 width:148px;
 text-align: center;	
@@ -335,7 +342,6 @@ background-position: 50% 50%;
 section.copyright {
 display: block;
 float: right;
-margin-top: 50px;
 width: 150px;
 text-align: center;	
 
@@ -361,7 +367,7 @@ padding: 9px 0;
 
 /* ЭФФЕКТЫ МЕНЮ И КНОПОК*/
 
-.main-menu ul>li:hover {
+.main-menu li:hover {
  background-color: #242424;
 
 }
@@ -445,11 +451,11 @@ margin-right: 10px;
 text-transform: uppercase;
 
 }
+{
 
 
 
-
-
+}
 .shop-container li {
  display: inline-block;
  float: left;
@@ -501,7 +507,9 @@ margin-bottom: 50px;
 
 .shop-available-articul {
 width: 380px;
-
+}
+.shop-available-articul td{
+	border:none;
 }
 .shop-available-articul td:last-child {
 text-align: right;
@@ -697,18 +705,19 @@ display: block;
 margin: auto;
 text-align: center;
 font-size: 48px;
+margin-bottom: 75px;
 
 
 }
 
 .container-title p {
-display: block;
+display: inline;
 margin: auto;
-width: 600px;
-margin-bottom: 75px;
 position: relative;
 top:52px;
+padding: 0 25px;
 background-image: url(../img/noise.jpg);
+z-index: 2;
 
 }
 
@@ -718,6 +727,7 @@ display: block;
 position: relative;
 top: 65px;
 border: solid #000 1px;
+z-index: 1;
 
 }
 
@@ -762,4 +772,151 @@ table.price td:nth-child(2n+1) {
 text-align: left;
 padding-left: 20px;  
 
+}
+
+/*ПОПАП ОКНА*/
+
+.popup-login {
+display: none;
+position: absolute;
+left:50%;
+top:120px;
+margin-left: -230px;
+width:300px;
+padding:30px 80px;
+color: #000;
+background: #fff url(../img/noise.jpg);
+box-shadow: 2px 2px 5px 3px;
+z-index: 20;
+
+}
+.popup-login-close
+ {
+position: absolute;
+top:0px;
+right:-25px;	
+background: transparent;
+font-size: 0;
+outline:none;
+border:none;
+width:20px;
+height:20px;
+cursor:pointer;	
+
+}
+
+.popup-login-close::before,
+.popup-login-close::after {
+content:"";
+position: absolute;
+top:8px;
+left:0px;
+display: block;
+width:19px;
+height:3px;
+border:solid #fff 1px;
+background-color: #d0d0d0;
+border-radius: 1px;
+
+}
+
+.popup-login-close::before {
+transform: rotate(45deg);	
+}
+
+.popup-login-close::after {
+transform: rotate(-45deg);	
+}
+
+.popup-login input[type=text], 
+.popup-login input[type=password] {
+	width:236px;
+	margin:0px;
+	margin-bottom:10px;
+	padding: 10px 20px;
+	padding-right: 40px;
+	font-family: "PT Sans Narrow", sans-serif, Arial;
+    font-weight: 700;
+	font-size: 14px;
+	color: #000;
+	border:solid #000 2px;
+}
+
+.popup-login input[type=text] {
+background: url(../img/User.png) no-repeat 270px 10px;	
+
+}
+
+.popup-login input[type=password] {
+background: url(../img/Locked.png) no-repeat 270px 10px;	
+
+}
+
+.popup-login a {
+float: right;
+line-height: 28px;
+color: #000;
+
+}
+
+.popup-login .btn { 
+display: block;
+width:100%;
+}
+
+.popup-map {
+display: none;
+position: fixed;
+left:50%;
+top:50%;
+transform:translate(-50%, -50%);
+border:solid #fff 7px;
+background-color: #fff;
+box-shadow: 0px 10px 5px 10px rgba(0,0,0,.5);
+z-index:20;	
+}
+
+.popup-map-close {
+position: absolute;
+top: -5px;
+right:-30px;	
+background: transparent;
+font-size: 0;
+outline:none;
+border:none;
+width:20px;
+height:20px;
+cursor:pointer;	
+}
+
+.popup-map-close::before,
+.popup-map-close::after {
+content:"";
+position: absolute;
+top:8px;
+left:0px;
+display: block;
+width:20px;
+height:3px;
+border:solid #fff 1px;
+background-color: #d0d0d0;
+border-radius: 1px;
+}
+
+.popup-map-close::before {
+transform:rotate(45deg);
+}
+.popup-map-close::after {
+transform:rotate(-45deg);
+}
+
+.overlay {
+display: none;
+position: fixed;
+top:0;
+left:0;
+width: 100%;
+height: 100%;
+z-index: 10;
+background-color: rgba(0,0,0,.8);	
 }

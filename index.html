@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> 
+<html lang="ru"> 
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="Мы оказываем услуги стрижки и укладки бороды, а также у нас можно купить средства по уходу за волосами">
@@ -46,7 +46,7 @@
 			<p>НАШИ&nbsp;МАСТЕРА&nbsp;—&nbsp;ПРОФЕССИОНАЛЫ&nbsp;СВОЕГО ДЕЛА&nbsp;И&nbsp;НЕ&nbsp;МОГУТ&nbsp;СТОИТЬ&nbsp;ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕНЫЙ СТАТУС?</p>
 		</div>
 	</section>
-	<div class=" container index-content">
+	<div class=" container index-content clearfix">
 		<div class="index-content-left">
 			<h2 class="index-content-title"> НОВОСТИ</h2>
 			<ul class="news-preview">
@@ -62,13 +62,13 @@
 			<h2 class="index-content-title">ФОТОГАЛЕРЕЯ</h2>
 			<div class="gallery">
 				<figure class="gallery-container"><img src="img/gallery.jpg" width="286" alt="" class="gallery-pic"></figure>
-				<button class="btn-prew" name="btn-prew">НАЗАД</button>
-				<button class="btn-next" name="btn-next">ВПЕРЕД</button>
+				<button type="button" class="btn" name="btn-prew">НАЗАД</button>
+				<button type="button" class="btn" name="btn-next">ВПЕРЕД</button>
 
 			</div>
 		</div>
 	</div>
-	<div class="container index-content">
+	<div class="container index-content clearfix">
 		<div class="index-content-left">
 			<h2 class="index-content-title">КОНТАКТНАЯ ИНФОРМАЦИЯ</h2>
 			<p>БАРБЕРШОП «БОРОДИНСКИЙ» АДРЕС: <br>
@@ -124,12 +124,39 @@
 	</footer>
 </main>
 
+
+
+<div class="popup popup-login">
+
+	<button  class="popup-login-close" type="button" title="Закрыть">Закрыть</button>	
+	<h2 class="popup-login-title">Личный кабинет</h2>
+	<p> введите свой логин и пароль</p>
+	<form action="#" class="login-form" method="post">
+
+		<input  name="login" type="text" placeholder="ЛОГИН">
+		<input  name="password" type="password" placeholder="ПАРОЛЬ">
+
+		<input  type="checkbox" name="remember-me" id="remember-me">
+		<label for="remember-me" class="check">ЗАПОМНИТЕ МЕНЯ</label>
+		
+		<a href="">Я ЗАБЫЛ ПАРОЛЬ!</a>
+		<button type="submit" class="btn">ВОЙТИ</button>
+
+
+	</form>
+</div>
+
+<div class="popup-map">
+<button type="button" class="popup-map-close">Закрыть</button>
+	<img src="img/map.png" width="766" alt="">
+</div>
+<div class="overlay">
 	
+</div>
+
+
+
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-
-
-
-
 
 </body>	
 
