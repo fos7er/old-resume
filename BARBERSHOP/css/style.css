@@ -34,33 +34,40 @@ font-size: 16px;
 list-style: none;
 margin-top: 0px;
 padding-left: 0px;
-height: 74px;
+
 
 
 
 }
 
 .main-menu li{
+position: relative;
 display: inline-block;
-height: 70px;  /**  ВЫСОТА ХЕДЕРА **/
+
 
 }
 
 
 
-li.current {
-height: 66px;
-border-bottom: solid #fff 4px;
+li.current::before {
+content: "";
+position: absolute;
+bottom: 6px;
+right: 20px;
+left: 20px;
+height: 3px;
+background-color: #fff;
+
+
+
 
 }
 
 .main-menu a {
 display: block;
 text-decoration: none;
-padding-top: 22px;
-padding-bottom: 15px;
-padding-left: 20px;
-padding-right: 20px;
+padding: 20px 20px;
+line-height: 30px;
 color:#fff;
 
 }
@@ -82,11 +89,11 @@ float:right;
 
 }
 .userblock a {
-height: 27px;
-padding-top: 18px;
-padding-bottom: 21px;
+height: 100%;
+padding: 20px 20px;
+line-height: 30px;
 padding-left: 40px;
-background:  url(../img/icon-login.png) no-repeat 10px 22px; //**КАРТИНКА ВХОДА**//
+background:  url(../img/icon-login.png) no-repeat 10px 26px; //**КАРТИНКА ВХОДА**//
 }
 .logo img {
 display: block;
@@ -373,7 +380,7 @@ padding: 9px 0;
 }
 
 .userblock a:hover {
-background: #242424 url(../img/login-active.png) no-repeat 10px 22px;
+background: #242424 url(../img/login-active.png) no-repeat 10px 26px;
 
 }
 
@@ -790,6 +797,8 @@ box-shadow: 2px 2px 5px 3px;
 z-index: 20;
 
 }
+
+
 .popup-login-close
  {
 position: absolute;
@@ -919,4 +928,8 @@ width: 100%;
 height: 100%;
 z-index: 10;
 background-color: rgba(0,0,0,.8);	
+}
+
+.popup-show {
+display: block;	
 }

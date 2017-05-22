@@ -158,6 +158,39 @@
 
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
+<script> var link=document.querySelector(".userblock a");
+var popupLogin=document.querySelector(".popup-login");
+var popupClose=document.querySelector(".popup-login-close");
+var contactsMap=document.querySelector(".contacts a");
+var popupMap=document.querySelector(".popup-map");
+var popupMapClose=document.querySelector(".popup-map-close");
+
+link.addEventListener("click", function(event) {
+
+event.preventDefault();
+popupLogin.classList.add("popup-show");	
+
+}
+);
+
+popupClose.addEventListener("click", function(event) {
+event.preventDefault();
+popupLogin.classList.remove("popup-show");
+});
+
+contactsMap.addEventListener("click", function(event) {
+event.preventDefault();
+popupMap.classList.add("popup-show");
+
+popupMapClose.addEventListener("click", function(event) {
+event.preventDefault();
+popupMap.classList.remove("popup-show");
+});	
+
+})
+
+</script>
+
 </body>	
 
 
