@@ -104,14 +104,14 @@
 
 		<div class="meta-content search">
 			<form action="/echo" method="post">
-				<input type="search" placeholder="Что ищем?">
+				<input type="search" name ="search" placeholder="Что ищем?">
 			</form>	
 
 		</div>
 		<div class="meta-content login">
 			<form action="/echo" method="post">
-				<input type="email" name="email" placeholder="Электронная почта">
-				<input type="password" name="password" placeholder="Пароль">
+				<input type="email" name="email" placeholder="Электронная почта" required>
+				<input type="password" name="password" placeholder="Пароль" required>
 				<button type="submit" class="promo-container-button">Войти</button>
 				<div class="login-forgot-pass"><a href="">Забыли пароль?</a> <br>
 				<a href="">Новая регистрация</a>
@@ -345,15 +345,19 @@ var loopa=document.querySelector(".loopa");
 var login=document.querySelector(".login");
 var metaSearch=document.querySelector(".meta-content.search");
 var metaLogin=document.querySelector(".meta-content.login");
+var focusSearch=metaSearch.querySelector("[name=search]");
+var focusEmail=metaLogin.querySelector("[name=email]");
 
 loopa.addEventListener("click", function(event) {
 event.preventDefault();
 metaSearch.classList.toggle("meta-content-show");
+focusSearch.focus();
 });
 
 login.addEventListener("click", function(event) {
 event.preventDefault();
 metaLogin.classList.toggle("meta-content-show");
+focusEmail.focus();
 });
 
 	
