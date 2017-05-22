@@ -7,8 +7,8 @@ body {
 	color: #fff;
 	margin: 0px;
 	text-transform: uppercase;
-  background-color: #000;
-  background: url(../img/index-background.jpg);
+	background-color: #000;
+  	background: url(../img/index-background.jpg);
 
 	
 	
@@ -110,7 +110,7 @@ margin-bottom: 37px;
 }
 main {
 margin-top:  -20px;
-background-color: black;
+
 
 
 }
