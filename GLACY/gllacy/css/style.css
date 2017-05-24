@@ -312,18 +312,18 @@ color:#fff;
 box-shadow: 0 3px 3px rgba(231,78,55,.3);
 cursor: pointer;
 text-shadow: 0px 2px 2px rgba(0,0,0,.5);
-transition: 200ms ease-out;
 }
 
 .promo-container-button:hover,
 .big-promo-button:hover {
-filter:brightness(130%);
+filter:brightness(110%);
 color: #fff;	
 }
 
 .promo-container-button:active,
 .big-promo-button:active {
-box-shadow: inset 0px 2px 0px rgba(0,0,0,.5);	
+box-shadow: inset 0px 2px 0px rgba(0,0,0,.5);
+filter:brightness(90%);	
 }
 
 .icecream-container {
@@ -680,4 +680,358 @@ width: 245px;
 
 .meta-content-show {
 display: block;	
+}
+
+/*СТИЛИ КАТАЛОГА*/
+
+.breadcrumbs {
+float: left;
+padding: 0;
+margin: 0;
+}
+
+.breadcrumbs li {
+display: inline-block;	
+}
+
+.breadcrumbs li::after {
+content: " »";	
+}
+
+.breadcrumbs li:last-child a{
+text-decoration:none;	
+}
+
+.breadcrumbs li:last-child::after {
+content: "";	
+}
+
+.breadcrumbs li a {
+color: inherit;	
+}
+.h1-catalog {
+float: left;
+clear: left;	
+}
+
+.sort-container {
+float: left;
+font-size: 14px;
+margin-bottom: 30px;	
+}
+
+.sort-container span {
+display: block;	
+padding-left: 20px;
+margin-bottom: 10px;
+}
+.sort-container select {
+margin-bottom: 10px;	
+}
+
+.sortirovka {
+float: left;
+margin-right: 10px;
+margin-bottom: 10px;	
+}
+.sortirovka.po-tipy {	
+width: 200px;
+}
+
+.inputs-container {
+background-color: rgba(255,255,255,.3);
+border-radius: 20px;
+padding: 10px 15px;
+font-size: 16px;
+margin-right: 5px;
+}
+
+.fillers {
+float: left;
+clear: left;	
+}
+
+.catalog select {
+background-color: rgba(255,255,255,.3);
+border-radius: 20px;
+padding: 10px 15px 10px 15px;
+border: none;
+outline: none;
+margin: 0;	
+}
+select option {
+color: #000;	
+}
+/*СТИЛИ КНОПОК*/
+.catalog input[type=checkbox],
+.catalog input[type=radio] {
+display: none;	
+}
+
+input[type=radio] + label {
+position: relative;	
+padding-left: 30px;
+line-height: 20px;
+margin-right: 20px;	
+}
+
+input[type=radio] + label:before {
+content:"";	
+position: absolute;
+top: 0px;
+left:0px;
+width: 18px;
+height: 18px;
+border: solid #fff 1px;
+border-radius: 50%;	
+}
+
+input[type=radio]:checked + label:after {
+content: "";
+position: absolute;
+width: 12px;
+height: 12px;
+top: 4px;
+left:4px;
+border-radius: 50%;
+background-color: #fff;	
+}
+
+input[type=checkbox] + label {
+position: relative;	
+padding-left: 30px;
+line-height: 20px;
+margin-right: 20px;	
+}
+
+input[type=ckeckbox] + label {
+position: relative;
+padding-left: 30px;
+line-height: 20px;
+margin-right: 20px;	
+}
+
+input[type=checkbox] + label:before {
+position: absolute;
+content:"";	
+top: 0px;
+left:0px;
+width: 18px;
+height: 18px;
+border: solid #fff 1px;
+border-radius: 3px;	
+}
+
+input[type=checkbox]:checked + label:after{
+position: absolute;
+content:"✔";
+top: 0px;
+left: 4px;
+font-size: 16px;
+}
+.filter-button	{
+float: left;
+margin-top: 28px;
+background-color: rgba(255,255,255,.3);
+border-radius: 20px;
+padding: 9px 25px;
+border: solid #fff 1px;
+font-size: 16px;
+
+}
+
+.filter-button:hover {
+background-color: #fff;
+color: #000;	
+}
+.catalog-main {
+float: left;
+border-bottom: solid #fff 1px;	
+}
+
+
+
+.catalog-item {
+position: relative;	
+float: left;
+width: 200px;
+border-radius: 5px;
+padding: 140px 0px 0px 0px;
+margin-bottom: -10px;
+margin-right: 20px;
+min-height: 200px;	
+}
+
+.catalog-main .catalog-item:nth-child(4n) {
+margin-right: 0px;	
+}
+
+.catalog-item:hover {
+box-shadow:
+20px 0px 0px rgba(255,255,255,.2),
+-20px 0px 0px rgba(255,255,255,.2);
+background-color: rgba(255,255,255,.2);	
+}
+
+
+
+.catalog-item span {
+display: block;
+font-size:45px;
+font-weight:bold;
+margin-bottom: 25px; 
+}
+
+.catalog-item b {
+font-size: 32px;	
+}
+
+.catalog-item p {
+color:inherit;
+text-align: center;
+text-decoration:underline;	
+}
+
+.catalog-item .promo-container-button {
+display: none;
+position: absolute;
+bottom:10px;
+left:15px;
+font-size: 14px;
+text-align: center;	
+}
+
+.catalog-item:hover > .promo-container-button {
+display: block;	
+}
+
+.item1 {
+background-image: url(..//img/1.png);
+background-repeat:  no-repeat;
+background-position: 0% 10px;	
+}
+
+.item2 {
+background-image: url(..//img/2.png);
+background-repeat:  no-repeat;
+background-position: 0% 10px;	
+}
+
+.item3 {
+background-image: url(..//img/3.png);
+background-repeat:  no-repeat;
+background-position: 0% 10px;	
+}
+
+.item4 {
+background-image: url(..//img/4.png);
+background-repeat:  no-repeat;
+background-position: 0% 10px;	
+}
+
+.item5 {
+background-image: url(..//img/5.png);
+background-repeat:  no-repeat;
+background-position: 0% 10px;	
+}
+
+.item6 {
+background-image: url(..//img/6.png);
+background-repeat:  no-repeat;
+background-position: 0% 10px;	
+}
+
+.item7 {
+background-image: url(..//img/7.png);
+background-repeat:  no-repeat;
+background-position: 0% 10px;	
+}
+
+.item8 {
+background-image: url(..//img/8.png);
+background-repeat:  no-repeat;
+background-position: 0% 10px;	
+}
+
+.item9 {
+background-image: url(..//img/9.png);
+background-repeat:  no-repeat;
+background-position: 0% 10px;	
+}
+
+.item10 {
+background-image: url(..//img/10.png);
+background-repeat:  no-repeat;
+background-position: 0% 10px;	
+}
+
+.item11 {
+background-image: url(..//img/11.png);
+background-repeat:  no-repeat;
+background-position: 0% 10px;	
+}
+
+.item12 {
+background-image: url(..//img/12.png);
+background-repeat:  no-repeat;
+background-position: 0% 10px;	
+}
+
+.nav-menu .current {
+background-color: #e84e37;	
+}
+
+/*СТИЛЬ ПЕРЕКЛЮЧАТЕЛСЯ СТРАНИЦ КАТАЛОГА*/
+
+.paginator {
+float: right;
+position: relative;
+}
+
+.paginator li {
+display: inline-block;
+	
+}
+
+.paginator li:first-child
+{
+position: absolute;
+top: 4px;
+left:15px;	
+font-size: 36px;	
+}
+
+.paginator li:last-child  {
+position: absolute;
+top: 4px;
+right: -20px;	
+font-size: 36px;	
+
+}
+
+.paginator a {
+display: block;
+width: 20px;
+height: 20px;
+text-align: center;	
+text-decoration:none;
+color:inherit;
+border-radius: 50%;
+	
+}
+
+.paginator .current {
+color: #000;
+background-color: #fff;
+border-radius: 50%;	
+font-weight: bold;
+}
+
+.paginator a.page:hover {
+background-color: rgba(255,255,255,0.4);	
+}
+
+.disabled {
+cursor: default;
+opacity: .4;	
 }

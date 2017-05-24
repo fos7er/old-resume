@@ -4,22 +4,21 @@
 	<meta charset="UTF-8">
 	<meta name="description" content="У нас самое вкусное мороженное в городе! Заказать мороженное на дом можно у нас!">
 	<meta name="keywords" content="мороженное, gllacy, крем-брюле, сливочное шоколадное мороженное, пломбир, мороженное на развес">
-	<title>Gllacy-catalog-stozen</title> 
+	<title>GLLACY-stozen</title> 
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&amp;subset=cyrillic" rel="stylesheet">
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </head>
 <body>
-
 <div class="container860">
 	<div class="header clearfix">
 		<div class="logo">
-			<img src="img/Logo.svg" width="155" height="60" alt="">
+			<a href="index.html"><img src="img/Logo.svg" width="155" height="60" alt=""></a>
 		</div>
 		<div class="nav-menu ">	
 		<ul>
-			<li><a href="catalog.html">Каталог</a></li>
+			<li><a href="catalog.html" class="current">Каталог</a></li>
 			<li><a href="#">Доставка и оплата</a></li>
 			<li><a href="#a"> О Компании</a></li>
 		</ul>
@@ -120,111 +119,209 @@
 		</div>
 	</div>
 	<!-- Кончается хедер -->
+	<main class="catalog">
+	<ul class="breadcrumbs">
+		<li><a href="index.html">Главная</a></li>
+		<li><a href="catalog.html">Каталог</a></li>
+		<li><a href="">Сливочное</a></li>
+	</ul>
 	
-
-	<div class="slider-container">
-
-		<input type="radio" id="btn-1" name="slider" checked>
-	    <input type="radio" id="btn-2" name="slider">
-	    <input type="radio" id="btn-3" name="slider">
-		<div class="slider-controls">
-					
-	                	<label for="btn-1"></label>
-	                    <label for="btn-2"></label>
-	                    <label for="btn-3"></label>
-			</div>
-		<div class="slider-images">
-			<img src="img/sliderFoto1.png" width="860" alt="">
-			<img src="img/sliderfoto2.png" width="860" alt="">
-			<img src="img/sliderfoto3.png" width="860" alt="">
+	<h1 class="h1-catalog">Сливочное мороженное</h1>
+	<div class="sort-container clearfix">
+		<form action="/echo" method="post"></form>
+		<div class="sortirovka po-tipy">
+			<span>Сортировка: </span> 
+			<select name="select-price" id="select1">
+				<option value="popular"> по популярности</option>
+				<option value="priceUP">сначала недорогие</option>
+				<option value="priceDOWN">сначала дорогие</option>
+				<option value="fat">по жирности</option>
+			</select>
+			
 		</div>
-		<h1>Крем-брюле и пломбир с малиновым джемом</h1>
+		<div class="sortirovka po-cene">
+		<span>Цена: <output name="min-range-price">100</output> 
+		<output name="max-range-price">500</output>
+
+		</span> 
 		
-		<a class="big-promo-button"> Давайте оба!</a>
-	</div>
+		<input type="range" name="rangeprice" id="rangeprice" multiple>
+			
+		</div>
+		<div class="sortirovka po-jiry">
+		<span>Жирность: </span>
+		 <div class="inputs-container">
+		 	<input type="radio" name="fat" id="fat1">
+		 	<label for="fat1">0%</label>
+		 	<input type="radio" name="fat" id="fat2" checked>
+		 	<label for="fat2">до 10%</label>
+		 	<input type="radio" name="fat" id="fat3">
+		 	<label for="fat3">до 20%</label>
+		 	<input type="radio" name="fat" id="fat4">
+		 	<label for="fat4">свыше 30%</label>
+		 </div>
+			
+		</div>
+		<div class="fillers">
 
-	<div class="promo-container first">
-		<h1>Малинка даром!</h1>
-		<p>При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-		<a class="promo-container-button">Хочу варенье!</a>
-	</div>
+		  <span>Наполнители:</span>
+		  <div class="inputs-container">
+		  <input type="checkbox" name="chocolate" id="chocolate" checked>
+		  <label for="chocolate">шоколадные</label>
 
-	<div class="promo-container second">
-		<h1>Шоколадки даром!</h1>
-		<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки абсолютно бесплатно.</p>
-		<a class="promo-container-button">Хочу шоколадки!</a>
-	</div>
-	<div class="icecream-container">
-			<div class="promo-icecream icecream1">
-				<span>310&#8381;<b>/кг</b></span>
-				<a href=""><p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p></a>
-				
+		  <input type="checkbox" name="sugar" id="sugar" checked>
+		  <label for="sugar">сахарные присыпки</label> 
 
+		  <input type="checkbox" name="fruit" id="fruit">
+		  <label for="fruit">фрукты</label>
+
+		  <input type="checkbox" name="syrup" id="syrup">
+		  <label for="syrup">сиропы</label>
+
+		  <input type="checkbox" name="jam" id="jam">
+		  <label for="jam">джемы</label>  
+		  </div>
+
+		</div>
+		<button class="filter-button" type="submit">Применить</button>
+	</form>
+	</div>
+	<section class="catalog-main clearfix">
+		
+		<div class="catalog-item item1">
+			<span>310&#8381;<b>/кг</b></span>
+			<p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+			<div class="promo-container-button">
+				Быстрый просмотр
 			</div>
-			<div class="promo-icecream icecream2">
-				<span>380&#8381;<b>/кг</b></span>
-				<a href=""><p>Сливочно-кофейное с кусочками шоколада</p></a>
-				
+
+		</div>
+
+		<div class="catalog-item item2">
+			<span>380&#8381;<b>/кг</b></span>
+			<p>Сливочно-кофейное с кусочками шоколада</p>
+			<div class="promo-container-button">
+				Быстрый просмотр
 			</div>
-			<div class="promo-icecream icecream2">
-				<span>355&#8381;<b>/кг</b></span>
-				<a href=""><p>Сливочно клубничное с присыпкой из белого шоколада</p></a>
-			
+
+		</div>
+
+		<div class="catalog-item item3">
+			<span>355&#8381;<b>/кг</b></span>
+			<p>Сливочно клубничное с присыпкой из белого шоколада</p>
+			<div class="promo-container-button">
+				Быстрый просмотр
 			</div>
-			<div class="promo-icecream icecream4">
-				<span>415&#8381;<b>/кг</b></span>
-				<a href=""><p>Сливочное крем-брюле с карамельной <br> подливкой</p></a>
-				
-		</div>
-	</div>
-	<div class="big-promo-container">
-		<h2>Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
-		</h2>
-		<div class="feature feature1">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
-		</div>
-		<div class="feature feature2">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-		<br><br>
-		</div>
-		<div class="feature feature3">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты произведены из натурального, экологически чистого сырья. 
-		</div>
-		<div class="feature feature4"> Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, которая не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.
-		</div>
-	</div>
 
-	<div class="promo-container third">
-		<span>Новое в нашем блоге</span>
-		<a href="">
-		<h2>10  способов сервировки фруктовых щербетов к столу
-		</h2>
-		</a>
-	</div>
-
-	<div class="promo-container fourth">
-		<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
-		<form action="#echo" method="post">
-			<input type="email" placeholder="Электронная почта">
-			<button class="promo-container-button" type="submit">Отправить</button>
-		</form>
-	</div>
-	<div class="map">
-	<img src="img/map.jpg" alt="" width="900" height="430">
-		<div class="contacts">
-			
-			Адрес главного офиса  и <br> офлайн магазина: <br>
-			<h3>ул. Большая Конюшенная 19/8, Санкт-Петербург</h3>
-			
-			
-				Для заказов по телефону: <br>
-				<h3 class="phone">8 812 450-25-25</h3>
-				(с 10 до 20 ежедневно)
-
-			
-			<a class="promo-container-button"> Форма обратной связи </a>
 		</div>
-	</div>
-	<hr>
-	<!--FOOTER-->
+
+		<div class="catalog-item item4">
+			<span>415&#8381;<b>/кг</b></span>
+			<p>Сливочное крем-брюле с карамельной подливкой</p>
+			<div class="promo-container-button">
+				Быстрый просмотр
+			</div>
+
+		</div>
+
+		<div class="catalog-item item5">
+			<span>325&#8381;<b>/кг</b></span>
+			<p>Сливочное с брусничным джемом</p>
+			<div class="promo-container-button">
+				Быстрый просмотр
+			</div>
+
+		</div>
+
+		<div class="catalog-item item6">
+			<span>410&#8381;<b>/кг</b></span>
+			<p>Сливочно-черничное с цельными ягодами черники</p>
+			<div class="promo-container-button">
+				Быстрый просмотр
+			</div>
+
+		</div>
+
+		<div class="catalog-item item7">
+			<span>375&#8381;<b>/кг</b></span>
+			<p>Сливочно-лимонное с карамельной присыпкой</p>
+			<div class="promo-container-button">
+				Быстрый просмотр
+			</div>
+
+		</div>
+
+		<div class="catalog-item item8">
+			<span>320&#8381;<b>/кг</b></span>
+			<p>Сливочное с шоколадной стружкой</p>
+			<div class="promo-container-button">
+				Быстрый просмотр
+			</div>
+
+		</div>
+
+		<div class="catalog-item item9">
+			<span>440&#8381;<b>/кг</b></span>
+			<p>Сливочно-ванильное с кусочками шоколада</p>
+			<div class="promo-container-button">
+				Быстрый просмотр
+			</div>
+
+		</div>
+
+		<div class="catalog-item item10">
+			<span>435&#8381;<b>/кг</b></span>
+			<p>Сливочное с ментоловым сиропом</p>
+			<div class="promo-container-button">
+				Быстрый просмотр
+			</div>
+
+		</div>
+
+		<div class="catalog-item item11">
+			<span>355&#8381;<b>/кг</b></span>
+			<p>Сливочное с кусочками черного шоколада</p>
+			<div class="promo-container-button">
+				Быстрый просмотр
+			</div>
+
+		</div>
+
+		<div class="catalog-item item12">
+			<span>420&#8381;<b>/кг</b></span>
+			<p>Сливочное с мятным сиропом</p>
+			<div class="promo-container-button">
+				Быстрый просмотр
+			</div>
+
+		</div>
+
+		<div class="paginator">
+			<ul>
+				<li><a href="#prev" class="disabled">‹</a></li>
+				<li><a href="" class="current">1</a></li>
+				<li><a href="" class="page">2</a></li>
+				<li><a href="" class="page">3</a></li>
+				<li><a href="" class="page">4</a></li>
+				<li><a href="" class="page">5</a></li>
+				<li><a href="#next">›</a></li>
+			</ul>
+		</div>
+
+
+
+
+
+		
+
+		
+	</section>
+
+	<br>
+	</main>
+	<!--FOOTER-->	
 	<div class="footer clearfix">
+
 		
 		<ul>
 			<li ><a  class="twitter" href="#">
@@ -269,7 +366,7 @@
 			    </style>
 			  </defs>
 			  <path id="Инста" class="cls-1" d="M87.865,2355.23a15.69,15.69,0,1,1-15.692,15.69A15.688,15.688,0,0,1,87.865,2355.23Zm6.272,23.61a1.745,1.745,0,0,0,1.745-1.75v-12.31a1.743,1.743,0,0,0-1.745-1.74H81.809a1.743,1.743,0,0,0-1.745,1.74v12.31a1.745,1.745,0,0,0,1.745,1.75H94.136Zm-1.375-9.1a4.921,4.921,0,1,1-9.529,0h-1.38v6.78a0.609,0.609,0,0,0,.611.61H93.529a0.609,0.609,0,0,0,.611-0.61v-6.78H92.761ZM88,2368.13a2.848,2.848,0,1,1,0,5.68A2.84,2.84,0,0,1,88,2368.13Zm3.7-3.31H93.56a0.609,0.609,0,0,1,.611.61v1.86a0.609,0.609,0,0,1-.611.61H91.7a0.609,0.609,0,0,1-.611-0.61v-1.86A0.609,0.609,0,0,1,91.7,2364.82Z" transform="translate(-73 -2355.22)"/>
-			</svg>
+					</svg>
 				
 				</a>
 			</li>
@@ -300,24 +397,24 @@
 			</li>
 			<li ><a  class="vk" href="#">
 			<svg xmlns="http://www.w3.org/2000/svg" width="31.375" height="31.41" viewBox="0 0 31.375 31.41">
-					  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-					<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
-					   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-					      <rdf:Description rdf:about=""/>
-					   </rdf:RDF>
-					</x:xmpmeta>
-					<?xpacket end="w"?></metadata>
-					<defs>
-					    <style>
-					      .cls-1 {
-					        fill: #fff;
-					        fill-rule: evenodd;
-					        opacity: 0.6;
-					      }
-					    </style>
-					  </defs>
-					  <path id="ВК" class="cls-1" d="M185.865,2355.23a15.69,15.69,0,1,1-15.692,15.69A15.687,15.687,0,0,1,185.865,2355.23Zm5.968,18.25a3.1,3.1,0,0,0-.758-2.2,3.7,3.7,0,0,0-2.016-1.09v-0.07a2.881,2.881,0,0,0,1.371-1.14,3.211,3.211,0,0,0,.5-1.77,3.133,3.133,0,0,0-.362-1.52,2.6,2.6,0,0,0-1.091-1.05,4.514,4.514,0,0,0-1.446-.48,17.993,17.993,0,0,0-2.269-.11h-4.8v13.59H186.4a8.906,8.906,0,0,0,2.331-.25,4.774,4.774,0,0,0,1.686-.86,3.583,3.583,0,0,0,1.032-1.27,3.909,3.909,0,0,0,.384-1.78h0Zm-4.373-5.59a1.5,1.5,0,0,0-.169-0.67,1,1,0,0,0-.527-0.5,2.11,2.11,0,0,0-.8-0.17c-0.309,0-.767-0.01-1.375-0.01h-0.237v2.88h0.43c0.583,0,.994-0.01,1.229-0.02a2.045,2.045,0,0,0,.726-0.19,1.129,1.129,0,0,0,.563-0.53,1.9,1.9,0,0,0,.157-0.79h0Zm0.856,5.53a1.673,1.673,0,0,0-.255-0.99,1.533,1.533,0,0,0-.767-0.54,2.658,2.658,0,0,0-.853-0.13c-0.362-.01-0.848-0.01-1.456-0.01h-0.63v3.4h0.184c0.888,0,1.5,0,1.843-.02a2.867,2.867,0,0,0,1.04-.24,1.381,1.381,0,0,0,.68-0.59A1.813,1.813,0,0,0,188.316,2373.42Z" transform="translate(-171 -2355.22)"/>
-			</svg>
+				  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+				<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+				   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+				      <rdf:Description rdf:about=""/>
+				   </rdf:RDF>
+				</x:xmpmeta>
+				<?xpacket end="w"?></metadata>
+				<defs>
+				    <style>
+				      .cls-1 {
+				        fill: #fff;
+				        fill-rule: evenodd;
+				        opacity: 0.6;
+				      }
+				    </style>
+				  </defs>
+				  <path id="ВК" class="cls-1" d="M185.865,2355.23a15.69,15.69,0,1,1-15.692,15.69A15.687,15.687,0,0,1,185.865,2355.23Zm5.968,18.25a3.1,3.1,0,0,0-.758-2.2,3.7,3.7,0,0,0-2.016-1.09v-0.07a2.881,2.881,0,0,0,1.371-1.14,3.211,3.211,0,0,0,.5-1.77,3.133,3.133,0,0,0-.362-1.52,2.6,2.6,0,0,0-1.091-1.05,4.514,4.514,0,0,0-1.446-.48,17.993,17.993,0,0,0-2.269-.11h-4.8v13.59H186.4a8.906,8.906,0,0,0,2.331-.25,4.774,4.774,0,0,0,1.686-.86,3.583,3.583,0,0,0,1.032-1.27,3.909,3.909,0,0,0,.384-1.78h0Zm-4.373-5.59a1.5,1.5,0,0,0-.169-0.67,1,1,0,0,0-.527-0.5,2.11,2.11,0,0,0-.8-0.17c-0.309,0-.767-0.01-1.375-0.01h-0.237v2.88h0.43c0.583,0,.994-0.01,1.229-0.02a2.045,2.045,0,0,0,.726-0.19,1.129,1.129,0,0,0,.563-0.53,1.9,1.9,0,0,0,.157-0.79h0Zm0.856,5.53a1.673,1.673,0,0,0-.255-0.99,1.533,1.533,0,0,0-.767-0.54,2.658,2.658,0,0,0-.853-0.13c-0.362-.01-0.848-0.01-1.456-0.01h-0.63v3.4h0.184c0.888,0,1.5,0,1.843-.02a2.867,2.867,0,0,0,1.04-.24,1.381,1.381,0,0,0,.68-0.59A1.813,1.813,0,0,0,188.316,2373.42Z" transform="translate(-171 -2355.22)"/>
+</svg>
 				
 
 				</a>
@@ -341,29 +438,19 @@
 		<a class="developer">STOZEN </a>
 	</div>
 
-</div>
-<script>
-var loopa=document.querySelector(".loopa");
-var login=document.querySelector(".login");
-var metaSearch=document.querySelector(".meta-content.search");
-var metaLogin=document.querySelector(".meta-content.login");
-var focusSearch=metaSearch.querySelector("[name=search]");
-var focusEmail=metaLogin.querySelector("[name=email]");
 
-loopa.addEventListener("click", function(event) {
-event.preventDefault();
-metaSearch.classList.toggle("meta-content-show");
-focusSearch.focus();
-});
 
-login.addEventListener("click", function(event) {
-event.preventDefault();
-metaLogin.classList.toggle("meta-content-show");
-focusEmail.focus();
-});
 
-	
 
-</script>
+</div>	
+
+
+
+
+
+
+
+
+
 </body>
 </html>
