@@ -19,7 +19,7 @@
 		</div>
 		<div class="nav-menu ">	
 		<ul>
-			<li><a href="catalog.html">Каталог</a></li>
+			<li><a href="catalog.html" id="catalog-btn">Каталог</a></li>
 			<li><a href="#">Доставка и оплата</a></li>
 			<li><a href="#a"> О Компании</a></li>
 		</ul>
@@ -118,15 +118,49 @@
 				</div>
 			</form>
 		</div>
+		<div class="meta-content meta-menu">
+			<ul>
+				<li><a  class="menu-item" href="">Новинки</a></li>
+				<li><a  class="menu-item" href="catalog.html">Сливочное</a></li>
+				<li><a  class="menu-item" href="">Щербеты</a></li>
+				<li><a  class="menu-item" href="">Фруктовый лёд</a></li>
+				<li><a  class="menu-item" href="">Мелорин</a></li>
+			</ul>
+		</div>
+		
+		<div class="meta-content cart-menu">
+		<table class="cart-menu-table">
+			<tr>
+				<td><span class=cart-item-close></span><img src="img/cart1.jpg" width="33" alt=""></td>
+				<td>Пломбир с апельсиновым джемом</td>
+				<td><span class="ammount">1,5кг</span> x <span class="cart-price">200 руб.</span></td>
+				<td>300 руб.</td>
+			</tr>
+			<tr>
+				<td><span class=cart-item-close></span><img src="img/cart2.jpg" width="33" alt=""></td>
+				<td> Клубничный пломбир с присыпкой из белого шоколада</td>
+				<td><span class="ammount">1,5 кг</span> x <span class="cart-price">300 руб.</span></td>
+				<td>450 руб.</td>
+			</tr>
+		</table>
+		<div class="total-price">Итого: <span class="total-price-value"> 750 руб.</span></div>
+		<button type="submit" class="promo-container-button">Оформить заказ</button>
 	</div>
+
+
+
+
+	</div>
+
+	
 	<!-- Кончается хедер -->
 	
 
 	<div class="slider-container">
 
-		<input type="radio" id="btn-1" name="slider" checked>
-	    <input type="radio" id="btn-2" name="slider">
-	    <input type="radio" id="btn-3" name="slider">
+		<input type="radio" id="btn-1" name="slider" checked onclick="changebackground();">
+	    <input type="radio" id="btn-2" name="slider" onclick="changebackground();">
+	    <input type="radio" id="btn-3" name="slider" onclick="changebackground();">
 		<div class="slider-controls">
 					
 	                	<label for="btn-1"></label>
@@ -342,28 +376,7 @@
 	</div>
 
 </div>
-<script>
-var loopa=document.querySelector(".loopa");
-var login=document.querySelector(".login");
-var metaSearch=document.querySelector(".meta-content.search");
-var metaLogin=document.querySelector(".meta-content.login");
-var focusSearch=metaSearch.querySelector("[name=search]");
-var focusEmail=metaLogin.querySelector("[name=email]");
+<script src="js/script.js"></script>
 
-loopa.addEventListener("click", function(event) {
-event.preventDefault();
-metaSearch.classList.toggle("meta-content-show");
-focusSearch.focus();
-});
-
-login.addEventListener("click", function(event) {
-event.preventDefault();
-metaLogin.classList.toggle("meta-content-show");
-focusEmail.focus();
-});
-
-	
-
-</script>
 </body>
 </html>
