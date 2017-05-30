@@ -30,6 +30,9 @@ metaMenu.classList.remove("meta-content-show");
 loopa.addEventListener("mouseover", function(event) {
 event.preventDefault();
 metaSearch.classList.add("meta-content-show");
+metaMenu.classList.remove("meta-content-show");
+metaLogin.classList.remove("meta-content-show");
+cartMenu.classList.remove("meta-content-show");
 focusSearch.focus();
 });
 
@@ -44,6 +47,9 @@ login.addEventListener("mouseover", function(event) {
 event.preventDefault();
 metaLogin.classList.add("meta-content-show");
 focusEmail.focus();
+metaSearch.classList.remove("meta-content-show");
+metaMenu.classList.remove("meta-content-show");
+cartMenu.classList.remove("meta-content-show");
 });
 
 
@@ -55,6 +61,9 @@ metaLogin.classList.remove("meta-content-show");
 cartButton.addEventListener("mouseover", function(event) {
 event.preventDefault();
 cartMenu.classList.add("meta-content-show");
+metaSearch.classList.remove("meta-content-show");
+metaMenu.classList.remove("meta-content-show");
+metaLogin.classList.remove("meta-content-show");
 });
 
 
