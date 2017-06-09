@@ -141,6 +141,7 @@ cursor: pointer;
 }
 .svg-login {
 width: 20px;
+height: 18px;
 position: absolute;
 left:16px;		
 }
@@ -170,6 +171,7 @@ opacity: 1;
 position: absolute;
 left:16px;
 width:20px;
+height: 19px;
 
 }
 
@@ -216,6 +218,8 @@ font-size: 32px;
 box-shadow: 0px 2px 2px rgba(0,0,0,.5);
 cursor: pointer;
 text-shadow: 0px 2px 2px rgba(0,0,0,.5);
+text-decoration:none;
+color:inherit;
 }
 
 .slider-controls {
@@ -335,6 +339,7 @@ color:#fff;
 box-shadow: 0 3px 3px rgba(231,78,55,.3);
 cursor: pointer;
 text-shadow: 0px 2px 2px rgba(0,0,0,.5);
+text-decoration:none;
 }
 
 .promo-container-button:hover,
@@ -589,7 +594,7 @@ margin-right: 70px;
 display: inline-block;	
 }
 
-.footer li a {
+.footer li div {
 display: block;
 width: 29px;
 height: 29px;
@@ -605,7 +610,7 @@ border-radius: 50%;
 opacity: 1.0;	
 }
 
-.footer li a:active {
+.footer li div:active {
 box-shadow: 0px 0px 0px 2px #000 inset;
 }
 
@@ -639,7 +644,7 @@ float: left;
 width: 180px;
 
 } 
-a.developer {
+.developer {
 float: right;
 border-radius: 20px;
 padding:10px 30px;
