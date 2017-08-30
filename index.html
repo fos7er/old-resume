@@ -2,337 +2,313 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="У нас самое вкусное мороженное в городе! Заказать мороженное на дом можно у нас!">
-	<meta name="keywords" content="мороженное, gllacy, крем-брюле, сливочное шоколадное мороженное, пломбир, мороженное на развес">
-	<title>Gllacy-stozen</title> 
+	<title>Куркин А. Front-end dev (Stozen)</title>
+	<meta name="description" content="Сайт портфолио Александра Куркина">
+	<meta name="keywords" content="frontend, css, html, Александр Куркин">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/normalize.css">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
 	<link rel="stylesheet" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&amp;subset=cyrillic" rel="stylesheet">
-	
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon.png" >
 </head>
 <body>
-
-<div class="container860">
-	<div class="header clearfix">
-		<div class="logo">
-			<img src="img/Logo.svg" width="155" height="60" alt="">
-		</div>
-		<div class="nav-menu ">	
-		<ul>
-			<li><a href="catalog.html" id="catalog-btn">Каталог</a></li>
-			<li><a href="#">Доставка и оплата</a></li>
-			<li><a href="#a"> О Компании</a></li>
-		</ul>
-		</div>
-
-		<div class="buttons">
-			<div class="nav-button loopa">
-
-				<svg xmlns="http://www.w3.org/2000/svg" class="loopa-logo" viewBox="0 0 16.687 16.688">
-								
-								<defs>
-								    <style>
-								      .cls-1 {
-								        fill: #fff;
-								        fill-rule: evenodd;
-								        opacity: 1.0;
-								      }
-								    </style>
-								  </defs>
-								  <path id="Лупа" class="cls-1" d="M638.155,40.747H637.4l-0.264-.261a6.21,6.21,0,1,0-.675.675l0.263,0.262v0.755l4.773,4.76,1.423-1.422Zm-5.731,0a4.291,4.291,0,1,1,4.3-4.291A4.294,4.294,0,0,1,632.424,40.747Z" transform="translate(-626.219 -30.25)"/>
-								</svg>
-
-
+<!-- Приветствуюшее окно ================================ -->
+	<div class="starter-screen-container" style="display:none">
+			<div class="starter-screen-pt1">
+				<h1 class="greetings"> <span>Hello, World.</span> <br> Вы находитесь на сайте Александра Куркина.</h1>
+				<h2 class="profession">Junior Front-end developer</h2>
+				<div class="go-to-site-button"> <h2>На&nbsp;сайт</h2></div>
 			</div>
-			<div class="nav-button login">
-			<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20.063 19" class="svg-login">
-					  
-					<defs>
-					    <style>
-					      .cls-1 {
-					        fill: #fff;
-					        fill-opacity: 0.99;
-					        fill-rule: evenodd;
-					      }
-					    </style>
-					  </defs>
-					  <path id="Вход" class="cls-1" d="M680,32.969v-0.96a3,3,0,0,1,3-3h11.059a3,3,0,0,1,3,3V44.986a3,3,0,0,1-3,3H683a3,3,0,0,1-3-3V44h2v2h13V31H682v1.969h-2Zm-3,8.046h6.029v2.743l7.027-5.3-7.027-5.3V35.9H677v5.114Z" transform="translate(-677 -29)"/>
-					</svg>
+			<div class="starter-screen-pt2"></div>
+	</div>
+	<!-- Навигация ======================================-->
+	<nav id="nav-wrap">
 
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
-			Вход
-			</div>
-			<div class="nav-button cart"> 
-					<svg xmlns="http://www.w3.org/2000/svg" class="svg-cart" viewBox="0 0 20.625 19.719">
-					 
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home">В начало</a></li>
+            <li><a class="smoothscroll" href="#about">Обо мне</a></li>
+	        <li><a class="smoothscroll" href="#resume">Резюме</a></li>
+	        <li><a class="smoothscroll" href="#skills">Навыки</a></li>
+            <li><a class="smoothscroll" href="#portfolio">Примеры работ</a></li>
+            <li><a class="smoothscroll" href="#contact">Контакты</a></li>
+         </ul> <!-- end #nav -->
 
-					
-					<defs>
-					    <style>
-					      .cls-1 {
-					        fill: #fff;
-					        fill-rule: evenodd;
-					      }
-					    </style>
-					  </defs>
-					  <path id="Корзина" class="cls-1" d="M799.576,33.46l-1.2,8.912a2.033,2.033,0,0,1-1.882,1.635H785.61a2.028,2.028,0,0,1-1.879-1.635l-1.469-10.287a3.668,3.668,0,0,1-.137-1.055H780a1,1,0,0,1,0-2h4a1,1,0,0,1,1,1,0.99,0.99,0,0,1-.9.979h13.965C799.172,31.01,799.84,32.141,799.576,33.46Zm-13.845,8.518-1.313-9h13.206s-0.031.2-.031,0.2l-1.186,8.788c-0.008.011-.009,0.014,0,0.014H785.731Zm0.515,3.009a1.874,1.874,0,1,1-1.875,1.874A1.874,1.874,0,0,1,786.246,44.987Zm9,0a1.874,1.874,0,1,1-1.875,1.874A1.874,1.874,0,0,1,795.246,44.987Z" transform="translate(-779 -29.031)"/>
-					</svg>
-			Пусто
+      </nav> <!-- end #nav-wrap -->
+      <!-- Тело сайта -->
+     
+	<section class="header" id="home">
+		<div class="header-content">
+	      	<h1 class="headline">Меня зовут Александр Куркин.</h1>
+	      	<h3> Я начинающий Front-end разработчик и верстальщик из Санкт-Петербурга. Это мой сайт портфолио, где Вы можете ознакомиться с моими навыками и примерами работ. <hr></h3>
+	      	
+	      	<ul class="my-contacts"> 
+	      	<li><a class="my-email" href="mailto:2012stalker@gmail.com" title="Email" target="blank">
+	      	<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 width="60px" height="60px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+				<path class="contacts-icon" d="M0,64v384h512V64H0z M455.438,96L256,266.938L56.578,96H455.438z M32,416V117.063l224,192l224-192V416H32z"/>
+			</svg>
+	      		
+	      	</a></li>
+	      	<li><a class="my-vk" href="https://vk.com/id18529471" title="Вконтакте">
+	      		<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 width="60px" height="60px" viewBox="0 0 548.358 548.358" style="enable-background:new 0 0 548.358 548.358;"
+					 xml:space="preserve">
+				<g>
+					<path class="contacts-icon" d="M545.451,400.298c-0.664-1.431-1.283-2.618-1.858-3.569c-9.514-17.135-27.695-38.167-54.532-63.102l-0.567-0.571
+						l-0.284-0.28l-0.287-0.287h-0.288c-12.18-11.611-19.893-19.418-23.123-23.415c-5.91-7.614-7.234-15.321-4.004-23.13
+						c2.282-5.9,10.854-18.36,25.696-37.397c7.807-10.089,13.99-18.175,18.556-24.267c32.931-43.78,47.208-71.756,42.828-83.939
+						l-1.701-2.847c-1.143-1.714-4.093-3.282-8.846-4.712c-4.764-1.427-10.853-1.663-18.278-0.712l-82.224,0.568
+						c-1.332-0.472-3.234-0.428-5.712,0.144c-2.475,0.572-3.713,0.859-3.713,0.859l-1.431,0.715l-1.136,0.859
+						c-0.952,0.568-1.999,1.567-3.142,2.995c-1.137,1.423-2.088,3.093-2.848,4.996c-8.952,23.031-19.13,44.444-30.553,64.238
+						c-7.043,11.803-13.511,22.032-19.418,30.693c-5.899,8.658-10.848,15.037-14.842,19.126c-4,4.093-7.61,7.372-10.852,9.849
+						c-3.237,2.478-5.708,3.525-7.419,3.142c-1.715-0.383-3.33-0.763-4.859-1.143c-2.663-1.714-4.805-4.045-6.42-6.995
+						c-1.622-2.95-2.714-6.663-3.285-11.136c-0.568-4.476-0.904-8.326-1-11.563c-0.089-3.233-0.048-7.806,0.145-13.706
+						c0.198-5.903,0.287-9.897,0.287-11.991c0-7.234,0.141-15.085,0.424-23.555c0.288-8.47,0.521-15.181,0.716-20.125
+						c0.194-4.949,0.284-10.185,0.284-15.705s-0.336-9.849-1-12.991c-0.656-3.138-1.663-6.184-2.99-9.137
+						c-1.335-2.95-3.289-5.232-5.853-6.852c-2.569-1.618-5.763-2.902-9.564-3.856c-10.089-2.283-22.936-3.518-38.547-3.71
+						c-35.401-0.38-58.148,1.906-68.236,6.855c-3.997,2.091-7.614,4.948-10.848,8.562c-3.427,4.189-3.905,6.475-1.431,6.851
+						c11.422,1.711,19.508,5.804,24.267,12.275l1.715,3.429c1.334,2.474,2.666,6.854,3.999,13.134c1.331,6.28,2.19,13.227,2.568,20.837
+						c0.95,13.897,0.95,25.793,0,35.689c-0.953,9.9-1.853,17.607-2.712,23.127c-0.859,5.52-2.143,9.993-3.855,13.418
+						c-1.715,3.426-2.856,5.52-3.428,6.28c-0.571,0.76-1.047,1.239-1.425,1.427c-2.474,0.948-5.047,1.431-7.71,1.431
+						c-2.667,0-5.901-1.334-9.707-4c-3.805-2.666-7.754-6.328-11.847-10.992c-4.093-4.665-8.709-11.184-13.85-19.558
+						c-5.137-8.374-10.467-18.271-15.987-29.691l-4.567-8.282c-2.855-5.328-6.755-13.086-11.704-23.267
+						c-4.952-10.185-9.329-20.037-13.134-29.554c-1.521-3.997-3.806-7.04-6.851-9.134l-1.429-0.859c-0.95-0.76-2.475-1.567-4.567-2.427
+						c-2.095-0.859-4.281-1.475-6.567-1.854l-78.229,0.568c-7.994,0-13.418,1.811-16.274,5.428l-1.143,1.711
+						C0.288,140.146,0,141.668,0,143.763c0,2.094,0.571,4.664,1.714,7.707c11.42,26.84,23.839,52.725,37.257,77.659
+						c13.418,24.934,25.078,45.019,34.973,60.237c9.897,15.229,19.985,29.602,30.264,43.112c10.279,13.515,17.083,22.176,20.412,25.981
+						c3.333,3.812,5.951,6.662,7.854,8.565l7.139,6.851c4.568,4.569,11.276,10.041,20.127,16.416
+						c8.853,6.379,18.654,12.659,29.408,18.85c10.756,6.181,23.269,11.225,37.546,15.126c14.275,3.905,28.169,5.472,41.684,4.716h32.834
+						c6.659-0.575,11.704-2.669,15.133-6.283l1.136-1.431c0.764-1.136,1.479-2.901,2.139-5.276c0.668-2.379,1-5,1-7.851
+						c-0.195-8.183,0.428-15.558,1.852-22.124c1.423-6.564,3.045-11.513,4.859-14.846c1.813-3.33,3.859-6.14,6.136-8.418
+						c2.282-2.283,3.908-3.666,4.862-4.142c0.948-0.479,1.705-0.804,2.276-0.999c4.568-1.522,9.944-0.048,16.136,4.429
+						c6.187,4.473,11.99,9.996,17.418,16.56c5.425,6.57,11.943,13.941,19.555,22.124c7.617,8.186,14.277,14.271,19.985,18.274
+						l5.708,3.426c3.812,2.286,8.761,4.38,14.853,6.283c6.081,1.902,11.409,2.378,15.984,1.427l73.087-1.14
+						c7.229,0,12.854-1.197,16.844-3.572c3.998-2.379,6.373-5,7.139-7.851c0.764-2.854,0.805-6.092,0.145-9.712
+						C546.782,404.25,546.115,401.725,545.451,400.298z"/>
+					</g>
+				</svg>
+	      	</a></li>
+	      	<li><a class="my-whatsapp" href="https://api.whatsapp.com/send?phone=79095904565" title="Whatsapp">
+					      		<svg version="1.1" id="logo-whatsapp" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="4px" width="58px" height="58px"
+					 viewBox="0 0 477.366 477.366" style="enable-background:new 0 0 477.366 477.366;" xml:space="preserve">
+				<g>
+					<g>
+						<path class="contacts-icon" d="M19.89,452.503c-2.486,4.973,0,9.945,2.486,12.431c4.973,2.486,9.945,2.486,14.918,2.486l74.588-27.349
+							c37.294,24.863,82.047,37.294,126.8,37.294c131.773,0,238.683-106.91,238.683-238.683S370.456,0,238.683,0S0,106.91,0,238.683
+							c0,49.726,14.918,99.451,44.753,139.232L19.89,452.503z M24.863,236.197c0-119.342,96.965-213.82,213.82-213.82
+							s213.82,96.965,213.82,213.82s-96.965,213.82-213.82,213.82c-42.267,0-84.534-12.431-119.342-34.808
+							c-2.486-2.486-4.973-2.486-7.459-2.486c-2.486,0-2.486,0-4.973,0l-57.185,22.377l19.89-57.184c2.486-4.973,0-7.459-2.486-12.431
+							C39.781,328.189,24.863,283.436,24.863,236.197z"/>
+						<path class="contacts-icon" d="M285.923,382.888c12.431,2.486,22.377,4.973,34.808,4.973c29.835,0,52.212-12.431,67.13-34.808
+							c7.459-14.918,9.945-27.349,7.459-39.781c-4.973-14.918-17.404-22.377-19.89-24.863l-37.294-19.89
+							c-4.973-2.486-9.945-4.973-14.918-4.973c-24.863,0-39.781,27.349-39.781,27.349s-2.486,2.486-7.459,2.486
+							c-2.486,0-2.486,0-2.486,0c-37.294-12.431-64.643-47.239-77.075-64.643l-2.486-2.486c-9.945-7.459-12.431-7.459-2.486-17.404
+							c19.89-17.404,14.918-37.294,9.945-44.753l-24.863-59.671c-2.486-4.973-12.431-12.431-22.377-12.431
+							c-12.431,0-27.349,7.459-44.753,24.863c-42.267,42.267-9.945,106.91-9.945,106.91C146.691,348.08,280.95,380.401,285.923,382.888z
+							 M126.8,134.259c14.918-17.404,24.863-17.404,27.349-17.404l27.349,59.671c0,2.486,2.486,7.459-4.973,14.918
+							c-24.863,22.377-17.404,37.294-4.973,52.212l2.486,2.486c12.431,17.404,44.753,59.671,89.506,72.102c0,0,4.973,0,9.945,0
+							c12.431,0,22.377-4.973,29.835-14.918c2.486-7.459,14.918-19.89,24.863-14.918l37.294,17.404c0,0,4.973,2.486,7.459,7.459
+							c2.486,7.459-2.486,14.918-4.973,19.89c-12.431,22.377-37.294,27.349-72.102,19.89c-4.973,0-126.8-32.322-171.554-141.718
+							C121.828,216.307,96.965,166.581,126.8,134.259z"/>
+					</g>
+				</svg>
+	      	</a></li>
+	      	</ul>
+	    </div>  	
+	      	<a href="#about" class="next-section smoothscroll"></a>
 
-			</div>
+	</section> <!-- header end ============-->
+
+	      <!-- Секция обо мне ===============================-->
+	
+	<section class="about" id="about">
+		<div class="profile-photo"></div>
+		<div class="right-column">
+		<div class="about-me"> <h2>Обо мне</h2>
+			<p> Аналитический склад ума, ответственный,  легко обучаемый (само-обучение), без вредных привычек, пунктуальный,  дисциплинированный.  Свободно читаю на английском и перевожу тексты, в том числе технические, разговорный английский среднего уровня (могу проходить интервью). Умею пользоваться гуглом и самостоятельно находить информацию например на stack-owerflow .</p>
 		</div>
-		<div class="telephone"> С 10 до 20, ежедневно <br> <span>8 812 450-25-25</span> 
+		<div class="contacts-details"> <h2> Контакты:</h2>
+			<p> Александр Куркин <br> Санкт-Петербург <br> м.Ладожская <br> +7-909-590-45-65 <br> 2012stalker@gmail.com</p>
 		</div>
+		     <a href="Kurkin.docx" class="download-resume" download><i class="fa fa-download" aria-hidden="true"></i> Скачать Резюме</a>
+		</div> <!-- right column -->
+	</section>
 
-		<div class="meta-content search">
-			<form action="/echo" method="post">
-				<input type="search" name ="search" placeholder="Что ищем?">
-			</form>	
+	      <!--- EDUCATION =========================-->
 
-		</div>
-		<div class="meta-content login">
-			<form action="/echo" method="post">
-				<input type="email" name="email" placeholder="Электронная почта" required>
-				<input type="password" name="password" placeholder="Пароль" required>
-				<button type="submit" class="promo-container-button">Войти</button>
-				<div class="login-forgot-pass"><a href="">Забыли пароль?</a> <br>
-				<a href="">Новая регистрация</a>
+	<section class="resume" id="resume">
+		<div class="resume-wrapper">
+			<div class="resume-part part-education" >
+				<div class="left-column">
+					<div class="resume-header">Образование</div>
 				</div>
-			</form>
-		</div>
-		<div class="meta-content meta-menu">
-			<ul>
-				<li><a  class="menu-item" href="">Новинки</a></li>
-				<li><a  class="menu-item" href="catalog.html">Сливочное</a></li>
-				<li><a  class="menu-item" href="">Щербеты</a></li>
-				<li><a  class="menu-item" href="">Фруктовый лёд</a></li>
-				<li><a  class="menu-item" href="">Мелорин</a></li>
+				<div class="right-column">
+					<h1>НИУ Информационных Технологий Механики и Оптики ИТМО</h1>
+					<h2> Инженер магистр • <span> июнь 2014</span> </h2>
+					<p> Защита магистерской диссертации на тему "Разработка программного средства и исследование субъективной ошибки поверителя геодезических приборов". Выдан диплом с отличием и присвоение звания магистра по направлению подготовки 221700 "Стандартизация и метрология". <br> Средний балл за время обучения: <b> 4.3/5. </b>
+
+					<h2> Инженер бакалавр • <span> июнь 2012</span> </h2>
+					<p>Присвоена степень бакалавра техники и технологии по направлению "приборостроение".
+					</p>
+				</div>
+			</div>
+			<!-- <div class="resume-part part-work">
+				<div class="left-column">
+					<div class="resume-header">Работа</div>
+				</div>
+				<div class="right-column">
+					<h1>НИУ Информационных Технологий Механики и Оптики ИТМО</h1>
+					<h2> Инженер магистр • <span> июнь 2014</span> </h2>
+					<p> Защита магистерской диссертации на тему "Разработка программного средства и исследование субъективной ошибки поверителя геодезических приборов". Выдан диплом с отличием и присвоение звания магистра по направлению подготовки 221700 "Стандартизация и метрология". <br> Средний балл за время обучения: <b> 4.3/5. </b>
+
+					<h2> Инженер бакалавр • <span> июнь 2012</span> </h2>
+					<p>Присвоена степень бакалавра техники и технологии по направлению "приборостроение".
+					</p>
+				</div>
+			</div>	 -->
+		</div> <!-- END OF RESUME WRAPPER -->
+	</section>
+	<section class="resume" id="skills">
+		<div class="resume-wrapper">
+			<div class="resume-part part-skills" >
+				<div class="left-column">
+					<div class="resume-header">Навыки</div>
+				</div>
+
+			<div class="right-column">
+					<h1>В данный момент я обладаю следующими Front-end нывыками:</h1>
+					<h2 class="skill-name"> HTML/CSS/LESS </h2>
+					<div class="skillbox"><div class="skill-level level7"></div></div>
+					<h2 class="skill-name"> Vanilla JavaScript </h2>
+					<div class="skillbox"><div class="skill-level level5"></div></div>
+					<h2 class="skill-name"> React </h2>
+					<div class="skillbox"><div class="skill-level level1"></div></div>
+					<h2 class="skill-name"> Графические редакторы </h2>
+					<div class="skillbox"><div class="skill-level level3"></div></div>
+					<div class="tools"> 
+						<h3> При разработке я использую инструменты:  </h3> 
+						<p> <b> SublimeText 3, </b><b> Gulp </b> ( плагины: gulp-less, gulp-autoprefixer, browser-sync, gulp-csso ), <b> Google Chrome </b>  с различными плагинами, <b> Adobe Photoshop + Paint.net, GitHub. </b>  </p>
+						</div>
+			</div>
+
+			</div>		
+		</div> <!-- END OF RESUME WRAPPER -->
+	</section>
+	<section class="portfolio" id="portfolio">
+		<h1 class="zagolovok">Примеры работ  Верстка</h1>
+		<div class="portfolio-container">
+			<div class="portfolio-item item1">
+				<div class="inner">
+					<br> 
+					<h3 class="sitename">Barbershop</h3>
+					<h3 class="work-type">Верстка</h3>
+					<div class="more-info-button" id="more-info-button1"> Подробнее</div>
+				</div>
+			</div>
+
+			<div class="portfolio-item item2">
+				<div class="inner"> 
+					<br>
+					<h3 class="sitename">Gllacy</h3>
+					<h3 class="work-type">Верстка</h3>
+					<div class="more-info-button" id="more-info-button2"> Подробнее</div>
+				</div>
+			</div>
+
+			<div class="portfolio-item item3">
+				<div class="inner">
+					<br> 
+					<h3 class="sitename">Pink</h3>
+					<h3 class="work-type"> Адаптивная Верстка</h3>
+					<div class="more-info-button" id="more-info-button3"> Подробнее</div>
+				</div>
+			</div>
+
+		</div> <!-- end of portfolio container-->
+		<hr>
+
+		<div class="js-examples">
+			<h1 class="zagolovok"> JavaScript примеры: </h1>
+			<ul class="main-ul">
+				<li>Интересные задачи из учебника Кантора:
+					<ul>
+						<li><a href="https://jsfiddle.net/9y4fm910/" class="simple-link">Дерево из объектов</a></li>
+						<li><a href="https://jsfiddle.net/sxj5b5h3/" class="simple-link">Мячик</a></li>
+						<li><a href="https://jsfiddle.net/dadmuu60/" class="simple-link">Range Слайдер</a></li>
+						<li><a href="https://jsfiddle.net/ye9nk2nn/" class="simple-link">Депозитный калькулятор</a></li>
+					</ul>
+
+				</li>
+
+				<li> Плагины:
+					<ul>
+						<li><a href="https://jsfiddle.net/r024aem1/" class="simple-link">Всплывающая подсказка для кнопок</a></li>
+						<li><a href="https://jsfiddle.net/1pfLzqp4/" class="simple-link">Подсветка текущей секции</a></li>
+						<li><a href="https://jsfiddle.net/zqqj6y07/" class="simple-link">Красивый Placeholder</a></li>
+					</ul>
+				</li>
+				
+				<li>  <a href="https://stozen-spb.github.io/ReactFirstApp/" class="simple-link">Первое приложение на React (доработка еще ведется).</a></li>
+			
+				
 			</ul>
-		</div>
-		
-		<div class="meta-content cart-menu">
-		<table class="cart-menu-table">
-			<tr>
-				<td><span class=cart-item-close></span><img src="img/cart1.jpg" width="33" alt=""></td>
-				<td>Пломбир с апельсиновым джемом</td>
-				<td><span class="ammount">1,5кг</span> x <span class="cart-price">200 руб.</span></td>
-				<td>300 руб.</td>
-			</tr>
-			<tr>
-				<td><span class=cart-item-close></span><img src="img/cart2.jpg" width="33" alt=""></td>
-				<td> Клубничный пломбир с присыпкой из белого шоколада</td>
-				<td><span class="ammount">1,5 кг</span> x <span class="cart-price">300 руб.</span></td>
-				<td>450 руб.</td>
-			</tr>
-		</table>
-		<div class="total-price">Итого: <span class="total-price-value"> 750 руб.</span></div>
-		<button type="submit" class="promo-container-button">Оформить заказ</button>
-	</div>
-
-
-
-
-	</div>
-
-	
-	<!-- Кончается хедер -->
-	
-
-	<div class="slider-container">
-
-		<input type="radio" id="btn-1" name="slider" checked onclick="changebackground();">
-	    <input type="radio" id="btn-2" name="slider" onclick="changebackground();">
-	    <input type="radio" id="btn-3" name="slider" onclick="changebackground();">
-		<div class="slider-controls">
 					
-	                	<label for="btn-1"></label>
-	                    <label for="btn-2"></label>
-	                    <label for="btn-3"></label>
+				</div>
+	</section>  
+	
+	<section class="footer">
+		<div class="footer-wrapper">
+			<div class="author-name">
+			Design inspared by Styleshout 2017.
 			</div>
-		<div class="slider-images">
-			<img src="img/sliderFoto1.png" width="860" alt="">
-			<img src="img/sliderfoto2.png" width="860" alt="">
-			<img src="img/sliderfoto3.png" width="860" alt="">
+			<div class="author-logo">STOZEN</div>
 		</div>
-		<h1>Крем-брюле и пломбир с малиновым джемом</h1>
+		<a  href="#home" class="footer-button smoothscroll"></a>
+	</section>
+
+	<!-- MODAL CONTENT ===========================-->
+	<div class="overlay modal-content"></div>
+
+	<div class="modal-content portfolio-big-item item1" id="portfolio1">
+		<div class="image-box"> </div>
+		<div class="descr-box"> <h2> Barbershop </h2> Мой первый учебный проект.  Осавивал основы  html и css, 4 страницы фиксированной верстки, есть pop-up меню, совсем немного JS. </div>
+		<div class="link-box">
+			<a href="https://stozen-spb.github.io/barbershop/">Перейти на сайт</a>
+			<a href="#" class="close-modal">Закрыть</a>
+		</div>
 		
-		<a class="big-promo-button"> Давайте оба!</a>
 	</div>
 
-	<div class="promo-container first">
-		<h1>Малинка даром!</h1>
-		<p>При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-		<a class="promo-container-button">Хочу варенье!</a>
-	</div>
-
-	<div class="promo-container second">
-		<h1>Шоколадки даром!</h1>
-		<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки абсолютно бесплатно.</p>
-		<a class="promo-container-button">Хочу шоколадки!</a>
-	</div>
-	<div class="icecream-container">
-			<div class="promo-icecream icecream1">
-				<span>310&#8381;<b>/кг</b></span>
-				<a href=""><p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p></a>
-				
-
-			</div>
-			<div class="promo-icecream icecream2">
-				<span>380&#8381;<b>/кг</b></span>
-				<a href=""><p>Сливочно-кофейное с кусочками шоколада</p></a>
-				
-			</div>
-			<div class="promo-icecream icecream2">
-				<span>355&#8381;<b>/кг</b></span>
-				<a href=""><p>Сливочно клубничное с присыпкой из белого шоколада</p></a>
-			
-			</div>
-			<div class="promo-icecream icecream4">
-				<span>415&#8381;<b>/кг</b></span>
-				<a href=""><p>Сливочное крем-брюле с карамельной <br> подливкой</p></a>
-				
+	<div class="modal-content portfolio-big-item item2" id="portfolio2">
+		<div class="image-box"> </div>
+		<div class="descr-box"> <h2> Gllacy </h2> В Gllacy использовано множество декоративных свойств css, применяются разнообразные селекторы. Слайдер работает на css + javascript. Сайт сделан с применением pixelperfect. Есть несколько всплывающих окон на js.</div>
+		<div class="link-box">
+			<a href="https://stozen-spb.github.io/gllacy/catalog.html">Перейти на сайт</a>
+			<a href="#" class="close-modal">Закрыть</a>
 		</div>
-	</div>
-	<div class="big-promo-container">
-		<h2>Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
-		</h2>
-		<div class="feature feature1">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
-		</div>
-		<div class="feature feature2">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-		<br><br>
-		</div>
-		<div class="feature feature3">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты произведены из натурального, экологически чистого сырья. 
-		</div>
-		<div class="feature feature4"> Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, которая не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.
-		</div>
-	</div>
-
-	<div class="promo-container third">
-		<span>Новое в нашем блоге</span>
-		<a href="">
-		<h2>10  способов сервировки фруктовых щербетов к столу
-		</h2>
-		</a>
-	</div>
-
-	<div class="promo-container fourth">
-		<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
-		<form action="#echo" method="post">
-			<input type="email" placeholder="Электронная почта">
-			<button class="promo-container-button" type="submit">Отправить</button>
-		</form>
-	</div>
-	<div class="map">
-	<img src="img/map.jpg" alt="" width="900" height="430">
-		<div class="contacts">
-			
-			Адрес главного офиса  и <br> офлайн магазина: <br>
-			<h3>ул. Большая Конюшенная 19/8, Санкт-Петербург</h3>
-			
-			
-				Для заказов по телефону: <br>
-				<h3 class="phone">8 812 450-25-25</h3>
-				(с 10 до 20 ежедневно)
-
-			
-			<a class="promo-container-button"> Форма обратной связи </a>
-		</div>
-	</div>
-	<hr>
-	<!--FOOTER-->
-	<div class="footer clearfix">
 		
-		<ul>
-			<li ><a  class="twitter" href="#">
-						<svg xmlns="http://www.w3.org/2000/svg" width="31.375" height="31.4" viewBox="0 0 31.375 31.4">
-						 
-						<defs>
-						    <style>
-						      .cls-1 {
-						        fill: #fff;
-						        fill-rule: evenodd;
-						        opacity: 0.6;
-						      }
-						    </style>
-						  </defs>
-						  <path id="Твитер" class="cls-1" d="M38.427,2355.17a15.69,15.69,0,1,1-15.692,15.69A15.688,15.688,0,0,1,38.427,2355.17Zm9.137,10.81a7.331,7.331,0,0,1-2.092.57,3.663,3.663,0,0,0,1.6-2.02,7.4,7.4,0,0,1-2.313.89,3.645,3.645,0,0,0-6.207,3.32,10.316,10.316,0,0,1-7.507-3.81,3.655,3.655,0,0,0,1.127,4.87,3.68,3.68,0,0,1-1.65-.46c0,0.02,0,.03,0,0.05a3.651,3.651,0,0,0,2.922,3.57,3.788,3.788,0,0,1-.959.13,3.859,3.859,0,0,1-.685-0.07,3.643,3.643,0,0,0,3.4,2.53,7.29,7.29,0,0,1-4.524,1.56,8.286,8.286,0,0,1-.869-0.05,10.354,10.354,0,0,0,15.946-8.73c0-.16,0-0.31-0.011-0.47A7.328,7.328,0,0,0,47.565,2365.98Z" transform="translate(-24 -2355.16)"/>
-						</svg>
-				</a>
-			</li>
-			<li ><a  class="instagram" href="#">
-					<svg xmlns="http://www.w3.org/2000/svg" width="31.376" height="31.41" viewBox="0 0 31.376 31.41">
-			  			
-			<defs>
-			    <style>
-			      .cls-1 {
-			        fill: #fff;
-			        fill-rule: evenodd;
-			        opacity: 0.6;
-			      }
-			    </style>
-			  </defs>
-			  <path id="Инста" class="cls-1" d="M87.865,2355.23a15.69,15.69,0,1,1-15.692,15.69A15.688,15.688,0,0,1,87.865,2355.23Zm6.272,23.61a1.745,1.745,0,0,0,1.745-1.75v-12.31a1.743,1.743,0,0,0-1.745-1.74H81.809a1.743,1.743,0,0,0-1.745,1.74v12.31a1.745,1.745,0,0,0,1.745,1.75H94.136Zm-1.375-9.1a4.921,4.921,0,1,1-9.529,0h-1.38v6.78a0.609,0.609,0,0,0,.611.61H93.529a0.609,0.609,0,0,0,.611-0.61v-6.78H92.761ZM88,2368.13a2.848,2.848,0,1,1,0,5.68A2.84,2.84,0,0,1,88,2368.13Zm3.7-3.31H93.56a0.609,0.609,0,0,1,.611.61v1.86a0.609,0.609,0,0,1-.611.61H91.7a0.609,0.609,0,0,1-.611-0.61v-1.86A0.609,0.609,0,0,1,91.7,2364.82Z" transform="translate(-73 -2355.22)"/>
-			</svg>
-				
-				</a>
-			</li>
-			<li ><a class="facebook" href="#">
-			<svg xmlns="http://www.w3.org/2000/svg" width="31.375" height="31.41" viewBox="0 0 31.375 31.41">
-						  
-						<defs>
-						    <style>
-						      .cls-1 {
-						        fill: #fff;
-						        fill-rule: evenodd;
-						        opacity: 0.6;
-						      }
-						    </style>
-						  </defs>
-						  <path id="ФБ" class="cls-1" d="M136.865,2355.23a15.69,15.69,0,1,1-15.692,15.69A15.687,15.687,0,0,1,136.865,2355.23Zm0.773,24.99v-9.29h2.743l0.285-3.09h-3.028l0-1.86c0-.89.085-1.25,1.367-1.25h1.764v-3.43h-2.792c-3.294,0-4.082,1.54-4.082,4.34v2.2h-1.889v3.09H133.9v9.29h3.738Z" transform="translate(-122 -2355.22)"/>
-						</svg>
-
-				
-				</a>
-			</li>
-			<li ><a  class="vk" href="#">
-			<svg xmlns="http://www.w3.org/2000/svg" width="31.375" height="31.41" viewBox="0 0 31.375 31.41">
-					  
-					<defs>
-					    <style>
-					      .cls-1 {
-					        fill: #fff;
-					        fill-rule: evenodd;
-					        opacity: 0.6;
-					      }
-					    </style>
-					  </defs>
-					  <path id="ВК" class="cls-1" d="M185.865,2355.23a15.69,15.69,0,1,1-15.692,15.69A15.687,15.687,0,0,1,185.865,2355.23Zm5.968,18.25a3.1,3.1,0,0,0-.758-2.2,3.7,3.7,0,0,0-2.016-1.09v-0.07a2.881,2.881,0,0,0,1.371-1.14,3.211,3.211,0,0,0,.5-1.77,3.133,3.133,0,0,0-.362-1.52,2.6,2.6,0,0,0-1.091-1.05,4.514,4.514,0,0,0-1.446-.48,17.993,17.993,0,0,0-2.269-.11h-4.8v13.59H186.4a8.906,8.906,0,0,0,2.331-.25,4.774,4.774,0,0,0,1.686-.86,3.583,3.583,0,0,0,1.032-1.27,3.909,3.909,0,0,0,.384-1.78h0Zm-4.373-5.59a1.5,1.5,0,0,0-.169-0.67,1,1,0,0,0-.527-0.5,2.11,2.11,0,0,0-.8-0.17c-0.309,0-.767-0.01-1.375-0.01h-0.237v2.88h0.43c0.583,0,.994-0.01,1.229-0.02a2.045,2.045,0,0,0,.726-0.19,1.129,1.129,0,0,0,.563-0.53,1.9,1.9,0,0,0,.157-0.79h0Zm0.856,5.53a1.673,1.673,0,0,0-.255-0.99,1.533,1.533,0,0,0-.767-0.54,2.658,2.658,0,0,0-.853-0.13c-0.362-.01-0.848-0.01-1.456-0.01h-0.63v3.4h0.184c0.888,0,1.5,0,1.843-.02a2.867,2.867,0,0,0,1.04-.24,1.381,1.381,0,0,0,.68-0.59A1.813,1.813,0,0,0,188.316,2373.42Z" transform="translate(-171 -2355.22)"/>
-			</svg>
-				
-
-				</a>
-			</li>
-		</ul>
-		
-			<div class="for-providers">
-				<a href=""><span>❤ Для поставщиков</span> <br>
-				</a>
-				<a href="">О производстве 
-				</a>
-
-			</div>
-
-			<div class="documents"> 
-				<a href="">Наши документы </a>
-				<br>
-				<a href="">Экологические стандарты </a>
-			</div>
-		
-		<a class="developer">STOZEN </a>
 	</div>
 
-</div>
-<script src="js/script.js"></script>
+	<div class="modal-content portfolio-big-item item3" id="portfolio3">
+		<div class="image-box"> </div>
+		<div class="descr-box"> <h2> Pink </h2> Полностью резиновый адаптивный сайт, выглядит по разному на телефонах, палншетах и ПК. Использован JQuery для слайдеров, работает их прокрутка на touch screen. Добавлена google карта. Активны главная страница и страница конкурса.</div>
+		<div class="link-box">
+			<a href="https://stozen-spb.github.io/pink-adaptive">Перейти на сайт</a>
+			<a href="#" class="close-modal">Закрыть</a>
+		</div>
+		
+	</div>
 
+
+<script src="js/jquery-1.10.2.min.js"></script>
+<!-- <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script> -->
+<script src="js/MyWaypoints.js"></script>	
+<script src="js/script.js"></script>	
 </body>
 </html>

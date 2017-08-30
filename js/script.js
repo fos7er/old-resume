@@ -1,142 +1,100 @@
+var goToSiteButton=document.querySelector(".go-to-site-button");
+var starterScreenPt1=document.querySelector(".starter-screen-pt1");
+var starterScreenPt2=document.querySelector(".starter-screen-pt2");
+var starterMainScreen=document.querySelector(".starter-screen-container");
 
-/* Мета контент главного меню*/
-var loopa=document.querySelector(".loopa");
-var login=document.querySelector(".login");
+goToSiteButton.addEventListener("click", function(event){
+goToSiteButton.classList.add("animation-rotate");
+starterScreenPt1.classList.add("animation-up");
+starterScreenPt2.classList.add("animation-down");
+starterMainScreen.classList.add("animation-dissappear");
 
-var metaSearch=document.querySelector(".meta-content.search");
-var metaLogin=document.querySelector(".meta-content.login");
-
-var focusSearch=metaSearch.querySelector("[name=search]");
-var focusEmail=metaLogin.querySelector("[name=email]");
-
-var metaMenu=document.querySelector(".meta-menu");
-var catalogButton=document.querySelector("#catalog-btn");
-
-var cartButton=document.querySelector(".cart");
-var cartMenu=document.querySelector(".cart-menu");
-
-catalogButton.addEventListener("mouseover", function(event) {
-event.preventDefault();
-metaMenu.classList.add("meta-content-show");
 });
 
-metaMenu.addEventListener("mouseleave", function(event) {
-metaMenu.classList.remove("meta-content-show");
+$(document).on('click', 'a.smoothscroll', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
 });
 
+// modal content show 
 
+var overlay =document.querySelector(".overlay");
+var portfolioItem1=document.querySelector("#portfolio1");
+var portfolioItem2=document.querySelector("#portfolio2");
+var portfolioItem3=document.querySelector("#portfolio3");
+var modalAll=document.querySelectorAll(".modal-content"), index, item;
 
+// находим кнопки открытия подробного окна элемента портфолио
+var OpenPortfolio1=document.querySelector("#more-info-button1");
+var OpenPortfolio2=document.querySelector("#more-info-button2");
+var OpenPortfolio3=document.querySelector("#more-info-button3");
 
-loopa.addEventListener("mouseover", function(event) {
-event.preventDefault();
-metaSearch.classList.add("meta-content-show");
-metaMenu.classList.remove("meta-content-show");
-metaLogin.classList.remove("meta-content-show");
-cartMenu.classList.remove("meta-content-show");
-focusSearch.focus();
+OpenPortfolio1.addEventListener("click", function() {
+overlay.classList.add("show");
+portfolioItem1.classList.add("show");	
 });
 
-
-metaSearch.addEventListener("mouseleave", function(event) {
-event.preventDefault();
-metaSearch.classList.remove("meta-content-show");
+OpenPortfolio2.addEventListener("click", function() {
+overlay.classList.add("show");
+portfolioItem2.classList.add("show");	
 });
 
-
-login.addEventListener("mouseover", function(event) {
-event.preventDefault();
-metaLogin.classList.add("meta-content-show");
-focusEmail.focus();
-metaSearch.classList.remove("meta-content-show");
-metaMenu.classList.remove("meta-content-show");
-cartMenu.classList.remove("meta-content-show");
+OpenPortfolio3.addEventListener("click", function() {
+overlay.classList.add("show");
+portfolioItem3.classList.add("show");	
 });
 
+var modalCloseButtons = document.querySelectorAll('.close-modal'), 
+    index, button; /* Все кнопки закрыть модал контент*/
 
-metaLogin.addEventListener("mouseleave", function(event) {
-event.preventDefault();
-metaLogin.classList.remove("meta-content-show");
-});
+for (index = 0; index < modalCloseButtons.length; index++) {
+    button = modalCloseButtons[index];
 
-cartButton.addEventListener("mouseover", function(event) {
-event.preventDefault();
-cartMenu.classList.add("meta-content-show");
-metaSearch.classList.remove("meta-content-show");
-metaMenu.classList.remove("meta-content-show");
-metaLogin.classList.remove("meta-content-show");
-});
+    button.addEventListener('click', closeModalFunction);
+ 
+}
 
+/* функцтя посика всего модал контент и закрытия */
+function closeModalFunction(event) {
+	event.preventDefault();
+	for (index=0; index< modalAll.length; index++) {
+		item=modalAll[index];
+		item.classList.remove("show");
+	}
 
-cartMenu.addEventListener("mouseleave", function(event) {
-event.preventDefault();
-cartMenu.classList.remove("meta-content-show");
-});
+}
+
 
 window.addEventListener("keydown", function(event) {
 if (event.keyCode === 27) 
 		{
-			if (metaSearch.classList.contains("meta-content-show"))
-			{metaSearch.classList.remove("meta-content-show"); }
-			if (metaMenu.classList.contains("meta-content-show"))
-			{metaMenu.classList.remove("meta-content-show");}
-			if (metaLogin.classList.contains("meta-content-show"))
-			{metaLogin.classList.remove("meta-content-show");}
-			if (cartMenu.classList.contains("meta-content-show"))
-			{cartMenu.classList.remove("meta-content-show");}
-			
+			closeModalFunction(event);
 		  
 		}
 });
 
+/* ПОДСВЕТКА МЕНЮ С ПОМОЩЬЮ ВЭЙПОИНТОВ */
+	var sections = $("section");
+	var navigation_links = $("#nav-wrap a");
 
+	sections.waypoint({
 
+      handler: function(event, direction) {
 
+		   var active_section;
 
-/* слайдер и цвет фона сайта */
+			active_section = $(this);
+			if (direction === "up") active_section = active_section.prev();
 
-var sliderBtn1=document.querySelector("#btn-1");
-var sliderBtn2=document.querySelector("#btn-2");
-var sliderBtn3=document.querySelector("#btn-3");
-var sliderContainer=document.querySelector(".slider-container");
-var bodycolor=document.querySelector("body");
+			var active_link = $('#nav-wrap a[href="#' + active_section.attr("id") + '"]');
 
+         navigation_links.parent().removeClass("current");
+			active_link.parent().addClass("current");
 
+		},
+		offset: '35%'
 
-function changebackground() {
-
-if (document.querySelector("#btn-1").checked==true) { 
-
-	bodycolor.classList.remove("site-color2");
-	bodycolor.classList.remove("site-color3");
-
-	
-	sliderContainer.classList.remove("slider-gradient2");
-	sliderContainer.classList.remove("slider-gradient3");
-
-	
-		 }
-if (document.querySelector("#btn-2").checked==true) { 
-	
-	bodycolor.classList.remove("site-color1");
-	bodycolor.classList.remove("site-color3");
-	bodycolor.classList.add("site-color2");
-	
-	sliderContainer.classList.remove("slider-gradient1");
-	sliderContainer.classList.remove("slider-gradient3");
-	sliderContainer.classList.add("slider-gradient2");
-	
-		 }		 
-if (document.querySelector("#btn-3").checked==true) { 
-	
-	bodycolor.classList.remove("site-color1");
-	bodycolor.classList.remove("site-color2");
-	bodycolor.classList.add("site-color3");
-	
-	sliderContainer.classList.remove("slider-gradient1");
-	sliderContainer.classList.remove("slider-gradient2");
-	sliderContainer.classList.add("slider-gradient3");
-	
-		 }
-
-}
-
+	});
