@@ -546,6 +546,7 @@ svg:hover {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+  margin-bottom: 30px;
 }
 .portfolio-item::before {
   content: "";
@@ -563,6 +564,9 @@ svg:hover {
 .portfolio-item.item3 {
   background-image: url(../img/pink.jpg);
   background-position: -25px center;
+}
+.portfolio-item.item4 {
+  background-image: url(../img/Wheel.jpg);
 }
 div.inner {
   opacity: 0;
@@ -750,6 +754,9 @@ div.inner::before {
 }
 .item3 .image-box {
   background: url(../img/pink-big.jpg) no-repeat center;
+}
+.item4 .image-box {
+  background: url(../img/Wheel.jpg) no-repeat center;
 }
 .simple-link {
   text-decoration: none;
