@@ -566,7 +566,7 @@ svg:hover {
   background-position: -25px center;
 }
 .portfolio-item.item4 {
-  background-image: url(../img/Wheel.jpg);
+  background-image: url(../img/wheel.jpg);
 }
 div.inner {
   opacity: 0;
@@ -756,7 +756,7 @@ div.inner::before {
   background: url(../img/pink-big.jpg) no-repeat center;
 }
 .item4 .image-box {
-  background: url(../img/Wheel.jpg) no-repeat center;
+  background: url(../img/wheel.jpg) no-repeat center;
 }
 .simple-link {
   text-decoration: none;
