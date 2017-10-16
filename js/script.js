@@ -22,6 +22,7 @@ $(document).on('click', 'a.smoothscroll', function(event){
 // modal content show 
 
 var overlay =document.querySelector(".overlay");
+var portfolioItem0=document.querySelector("#portfolio0");
 var portfolioItem1=document.querySelector("#portfolio1");
 var portfolioItem2=document.querySelector("#portfolio2");
 var portfolioItem3=document.querySelector("#portfolio3");
@@ -29,10 +30,17 @@ var portfolioItem4=document.querySelector("#portfolio4");
 var modalAll=document.querySelectorAll(".modal-content"), index, item;
 
 // находим кнопки открытия подробного окна элемента портфолио
+var OpenPortfolio0=document.querySelector("#more-info-button0");
 var OpenPortfolio1=document.querySelector("#more-info-button1");
 var OpenPortfolio2=document.querySelector("#more-info-button2");
 var OpenPortfolio3=document.querySelector("#more-info-button3");
 var OpenPortfolio4=document.querySelector("#more-info-button4");
+
+OpenPortfolio0.addEventListener("click", function() {
+overlay.classList.add("show");
+portfolioItem0.classList.add("show");	
+});
+
 
 OpenPortfolio1.addEventListener("click", function() {
 overlay.classList.add("show");

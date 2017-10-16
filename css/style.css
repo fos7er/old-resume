@@ -527,10 +527,10 @@ svg:hover {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 60%;
@@ -540,6 +540,7 @@ svg:hover {
 }
 .portfolio-item {
   width: 30%;
+  margin-right: 3%;
   background-color: #fff;
   text-align: left;
   -webkit-box-sizing: border-box;
@@ -557,6 +558,9 @@ svg:hover {
 }
 .portfolio-item:hover > .inner {
   opacity: 1.0;
+}
+.portfolio-item.item0 {
+  background-image: url(../img/buhgalter.jpg);
 }
 .portfolio-item.item1 {
   background-image: url(../img/barbershop.jpg);
@@ -749,6 +753,9 @@ div.inner::before {
   text-decoration: none;
   margin-right: 30px;
 }
+.item0 .image-box {
+  background: url(../img/buhgalter.jpg) no-repeat center;
+}
 .item1 .image-box {
   background: url(../img/barbershop-big.jpg) no-repeat center;
 }
@@ -759,7 +766,7 @@ div.inner::before {
   background: url(../img/pink-big.jpg) no-repeat center;
 }
 .item4 .image-box {
-  background: url(../img/Wheel.jpg) no-repeat center;
+  background: url(../img/wheel.jpg) no-repeat center;
 }
 .simple-link {
   text-decoration: none;
