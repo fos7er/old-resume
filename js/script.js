@@ -20,48 +20,18 @@ $(document).on('click', 'a.smoothscroll', function(event){
 });
 
 // modal content show 
-
 var overlay =document.querySelector(".overlay");
-var portfolioItem0=document.querySelector("#portfolio0");
-var portfolioItem1=document.querySelector("#portfolio1");
-var portfolioItem2=document.querySelector("#portfolio2");
-var portfolioItem3=document.querySelector("#portfolio3");
-var portfolioItem4=document.querySelector("#portfolio4");
-var modalAll=document.querySelectorAll(".modal-content"), index, item;
+var modalAll=document.querySelectorAll(".modal-content"),item;
 
-// находим кнопки открытия подробного окна элемента портфолио
-var OpenPortfolio0=document.querySelector("#more-info-button0");
-var OpenPortfolio1=document.querySelector("#more-info-button1");
-var OpenPortfolio2=document.querySelector("#more-info-button2");
-var OpenPortfolio3=document.querySelector("#more-info-button3");
-var OpenPortfolio4=document.querySelector("#more-info-button4");
+$('#portfolio').on('click', '.portfolio-item', function (event) {
+	event.preventDefault();
+	var modalId = this.getAttribute('data-portfoliomodal');
+	overlay.classList.add("show");
+	document.getElementById(modalId).classList.add('show');
 
-OpenPortfolio0.addEventListener("click", function() {
-overlay.classList.add("show");
-portfolioItem0.classList.add("show");	
+
+
 });
-
-
-OpenPortfolio1.addEventListener("click", function() {
-overlay.classList.add("show");
-portfolioItem1.classList.add("show");	
-});
-
-OpenPortfolio2.addEventListener("click", function() {
-overlay.classList.add("show");
-portfolioItem2.classList.add("show");	
-});
-
-OpenPortfolio3.addEventListener("click", function() {
-overlay.classList.add("show");
-portfolioItem3.classList.add("show");	
-});
-
-OpenPortfolio4.addEventListener("click", function() {
-overlay.classList.add("show");
-portfolioItem4.classList.add("show");	
-});
-
 
 var modalCloseButtons = document.querySelectorAll('.close-modal'), 
     index, button; /* Все кнопки закрыть модал контент*/
