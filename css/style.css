@@ -615,6 +615,7 @@ div.inner::before {
 }
 .inner .more-info-button:hover {
   color: #11ABB0;
+  cursor: pointer;
 }
 .js-examples {
   display: -webkit-box;
